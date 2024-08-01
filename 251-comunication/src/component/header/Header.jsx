@@ -32,14 +32,14 @@ const Header = () => {
       whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'> culture </motion.li> </Link>
             <Link to='/about'> <motion.li variants={containerVariants}
       whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>About</motion.li> </Link>
-            <motion.li variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>clients</motion.li>
-            <motion.li variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>News</motion.li>
-            <motion.li variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>contact</motion.li>
-            <motion.li variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>carer</motion.li>
+           <Link to='/clients'> <motion.li variants={containerVariants}
+      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>clients</motion.li> </Link>
+            <Link to='/news' ><motion.li variants={containerVariants}
+      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>News</motion.li> </Link>
+           <Link to='/contact'> <motion.li variants={containerVariants}
+      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>contact</motion.li> </Link>
+            <Link to='/carer' ><motion.li variants={containerVariants}
+      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'>carer</motion.li> </Link>
 </ul>
 </div>
   <div className="header-icons flex items-center justify-center gap-8 text-[--white1]">
