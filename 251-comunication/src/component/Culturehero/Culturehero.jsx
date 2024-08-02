@@ -4,8 +4,8 @@ import { FaCheck } from "react-icons/fa6";
 
 const Culturehero = () => {
   return (
-    <section className="culture-wrapper p-0 m-0">
-        <div className="culture-container p-0  m-0">
+    <section className="culture-wrapper ">
+        <div className="culture-container p-10 pt-0 m-0">
         
           <h1 className=' flex justify-center text-[--yellow] text-[3rem] font-bold leading-[3.8rem] m-auto p-10'>WE EMBODIES A CULTURE OF <br/> COLLABRATION, GROWTH,<bR/> AND CLIENTS FOCUS WHILE<bR/> SUPPORTING AND VALUING <br/>OUR EMPLOYEES.</h1>
           

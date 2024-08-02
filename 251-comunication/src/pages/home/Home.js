@@ -5,6 +5,7 @@ import Homehero from '../../component/Homehero/Homehero'
 const Home = () => {
   return (
     <div>
+      <Header />
      <Homehero />
        </div>
   )

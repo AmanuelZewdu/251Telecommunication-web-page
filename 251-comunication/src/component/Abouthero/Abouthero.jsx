@@ -1,38 +1,20 @@
 import React from 'react'
 import '../styles/About.css'
 import { FaCheck } from "react-icons/fa6";
+import Aboutheader from '../Aboutheader/Aboutheader';
+
+
 
 const Abouthero = () => {
+     
+ 
+  
+  
+  
   return (
     <section className="about-wrapper">
+        <Aboutheader />
         <div className="about-container">
-         <div className="header-sub-menu hover:cursor-pointer  grid  grid-cols-4 md:grid-cols-4 lg:grid-cols-8  align-middle justify-center px-5 md:px-20  p-10">
-          <div className='border-[1px] text-[--white1]  border-solid border-[--white1] px-6 text-center'>
-            <p>Experimental</p>
-          </div>
-          <div className='border-[1px]  text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>Creative</p>
-          </div>
-          <div className='border-[1px] text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>Digital</p>
-          </div>
-          <div className='border-[1px] text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>PR</p>
-          </div>
-          <div className='border-[1px] text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>Media</p>
-          </div>
-          <div className='border-[1px] text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>Production</p>
-          </div>
-          <div className='border-[1px] text-[--white1] border-solid border-[--white1] px-6 text-center w-[100%]'>
-            <p>Reasearch</p>
-          </div>
-          <div className='border-[1px] text-[--white1]  border-solid border-[--white1] px-6 text-center w-[100%]'> 
-            <p>comuniction</p>
-          </div>
-        </div>
-
         <div className="about-us flex items-center justify-between">
           <div className="about-left w-[100%]">
            <img src="placeholder.jpg"  alt="placeholder" />
