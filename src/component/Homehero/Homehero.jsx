@@ -9,7 +9,7 @@ const Homehero = () => {
     <div className="hero-container flex  relative  justify-center m-auto p-20 mb-20 overflow-hidden">
       
       <div className=' w-[100%]  '>
-      <img src={Herotext} alt='text' className='  h-[70%] w-[10%] mr-[-35%] absolute'  />
+      <img src={Herotext} alt='text' className='  h-[71%] w-[10%] mr-[-35%] absolute'  />
       </div>
             
         
