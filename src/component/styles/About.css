@@ -1,0 +1,7 @@
+.about-container{
+    background-image: url('../../asset/about-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}

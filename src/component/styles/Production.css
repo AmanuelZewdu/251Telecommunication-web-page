@@ -1,0 +1,8 @@
+.production-container{
+    background-image: url('../../asset/production-img.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120svh;
+    
+}
