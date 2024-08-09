@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CiDesktop } from "react-icons/ci";
 import { CiMobile3 } from "react-icons/ci";
 import { motion } from 'framer-motion';
+import { FcMenu } from "react-icons/fc";
+import { IoMdClose } from "react-icons/io";
 import  Logo from '../../asset/logo.png'
 import { NavLink , useLocation} from 'react-router-dom';
 const Mainheader = () => {
-    const containerVariants = {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [clientWidth, setClientWidth] = useState(typeof document !== 'undefined' ? document.documentElement.clientWidth : 0)
+  useEffect(() => {
+    const handleResize = () => setClientWidth(document.documentElement.clientWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  const getMenustyle = (menuOpen, clientWidth) => {
+     if(clientWidth <= 800 ) {
+      return{ visibility: !menuOpen ? "hidden" : ""}
+     }
+    
+  }
+  
+  
+  
+  const containerVariants = {
         hover: {
           rotate: 360,
           transition: {
@@ -27,13 +46,14 @@ const Mainheader = () => {
  
     return (
     <section className="header-wrapper bg-[--white] ">
-    <div className="header-container p-[70px] px-[40px] flex justify-between items-center ">
+    <div className="header-container p-[40px] md:p-[70px] px-[40px] flex justify-between  ">
        
        <motion.img variants={containerVariants}
       whileHover="hover"  src={Logo} className='w-[7rem] h-[25%]  hover:cursor-pointer' alt='logo'/>
        
-     <div className='navbar'>
-     <ul className='flex items-center justify-center gap-16 text-[--black]'>
+     <div style={getMenustyle(menuOpen, clientWidth)} className='navbar  absolute   bg-[#DFDFDE] z-10 p-10 right-0 md:right-[22%] lg:right-[20%] md:ml-0 md:bg-transparent  px-24'>
+     <ul className='flex flex-col gap-6 p-4 m-0   items-center justify-center md:gap-3 lg:gap-8 xl:gap-16 text-[--black
+     ] md:flex-row'>
       {links.map((link) => (
         <NavLink
           key={link.path} 
@@ -50,7 +70,7 @@ const Mainheader = () => {
       ))}
     </ul>
 </div>
-  <div className="header-icons flex items-center justify-center gap-8 text-[--black]">
+  <div className="header-icons hidden md:flex items-center justify-center gap-8 text-[--black]">
   <motion.div variants={containerVariants}
       whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]' >
   <CiDesktop   size={45} />
@@ -60,9 +80,11 @@ const Mainheader = () => {
   <CiMobile3  size={45}/>
   </motion.div>
   </div>
- <div>
 
- </div>
+  <button className=' absolute right-2 text-[--black] mt-2  z-50  flex md:hidden  ' onClick={() => setMenuOpen((prev) => !prev) }>
+ {menuOpen ? <IoMdClose size={35} /> :  <FcMenu size={35} /> 
+} 
+  </button>
 
      
 

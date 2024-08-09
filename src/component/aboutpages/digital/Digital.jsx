@@ -7,7 +7,7 @@ const Digital = () => {
     <section className="digital-top p-0 m-0">
          <Header />
          <Aboutheader />
-          <div className="digital-content flex justify-between items-center p-20">
+          <div className="digital-content flex-col md:flex-row gap-16 md:gap-0 flex justify-between items-center p-20">
             <div className="digital-left">
                 <h2 className='text-[--yellow] text-[1.5rem] font-bold'>WE CRAFT</h2>
                 <h2 className='text-[--white] text-[1.5rem] font-bold'>A POWERFUL DIGITAL <br/> PRESENCE <br /> FOR YOUR BRAND</h2>

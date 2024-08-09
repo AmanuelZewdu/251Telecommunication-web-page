@@ -9,6 +9,7 @@ import Production from './component/aboutpages/production/Production';
 import Research from './component/aboutpages/research/Research';
 import Home from './pages/home/Home';
 import Digital from './component/aboutpages/digital/Digital';
+import Carer from './component/carer/Carer';
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
            <Route path='/about/reasearch'   element={<Research/>} />
            <Route path='/about/communication'  />
            <Route path='/contact' element={<Contact />} />
+           <Route path='/carer' element={<Carer />} />
 
         </Routes>
        </Router>

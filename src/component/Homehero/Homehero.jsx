@@ -5,22 +5,22 @@ import Herotext1 from '../../asset/home-text2.png'
 import { motion } from 'framer-motion'
 const Homehero = () => {
   return (
-   <section hero-wrapper>
-    <div className="hero-container flex  relative  justify-center m-auto p-20 mb-20 overflow-hidden">
+   <section className='hero-wrapper '>
+    <div className="hero-container flex  relative  justify-center  md:p-20 p-10 md:mb-20 mb-5 overflow-hidden">
       
-      <div className=' w-[100%]  '>
-      <img src={Herotext} alt='text' className='  h-[70%] w-[10%] mr-[-35%] absolute'  />
+      <div className=' w-[100%]  md:mr-0'>
+      <img src={Herotext} alt='text' className='  h-[70%] z-10 w-[10%] md:mr-[-35%] absolute'  />
       </div>
             
         
-      <motion.img  className='w-[70%]'   initial={{x: "7rem", opacity: 0}}
+      <motion.img  className='md:w-[70%]  h-[150%] w-[100%]'   initial={{x: "7rem", opacity: 0}}
     animate={{x: 0, opacity: 1}}
     transition={{
         duration: 4,
         type: "spring"  }} src={Heroimg} alt="hero"  />
         
         <div className='mt-[25%] z-10 w-[100%]'>
-        <img src={Herotext1} alt='text' className='w-[25%] absolute ml-[-10%]'  />
+        <img src={Herotext1} alt='text' className='w-[25%]   absolute ml-[-10%]'  />
         </div>
     </div>
    </section>

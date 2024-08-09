@@ -6,7 +6,7 @@ const Aboutheader = () => {
   
     return (
     <div>
-            <div className="header-sub-menu hover:cursor-pointer  grid  grid-cols-4 md:grid-cols-4 lg:grid-cols-6   align-middle justify-center px-5 md:px-20 m-auto  p-10">
+            <div className="header-sub-menu hover:cursor-pointer  grid  grid-cols-3 md:grid-cols-3 lg:grid-cols-6   align-middle justify-center px-5 md:px-20 m-auto  p-10">
           <NavLink to='/about/expermental' className={`border-[1px] text-[--white1]  border-solid border-[--white1] px-6 text-center ${location.pathname === '/about/expermental' ? 'border-[--yellow]' : ''} `}>
             <p>Experimental</p>
           </NavLink>

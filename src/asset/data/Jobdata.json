@@ -1,0 +1,31 @@
+{
+
+    "job": [
+    
+    {
+     "title": "Digital Marketing",
+     "name": "Social Media Supersivor",
+     "city" : "Addis Ababa, ETH",
+     "time" : "Full Time"
+ },
+
+ {
+    "title": "Experiental",
+    "name": "Btl Supervisor",
+    "city" : "Addis Ababa, ETH",
+    "time" : "Full Time"
+},
+
+{
+    "title": "PR & Media",
+    "name": "Assistant Pr officer",
+    "city" : "Addis Ababa, ETH",
+    "time" : "Full Time"
+}
+
+
+ 
+]
+
+
+}
