@@ -53,7 +53,7 @@ const Header = () => {
        <motion.img variants={containerVariants}
       whileHover="hover"  src={Logo} className='w-[6rem] h-[10%] text-[--white] hover:cursor-pointer' alt='logo'/>
        
-     <div style={getMenustyle(menuOpen, clientWidth)} className='navbar absolute   bg-[--brown] z-10 p-10 right-0 md:right-[22%] lg:right-[20%] md:ml-0 md:bg-transparent  px-24'>
+     <div style={getMenustyle(menuOpen, clientWidth)} className='navbar absolute z-50   bg-[--brown]  p-10 right-0 md:right-[22%] lg:right-[20%] md:ml-0 md:bg-transparent  px-24'>
      <ul className='flex flex-col gap-6 p-4 m-0   items-center justify-center md:gap-3 lg:gap-8 xl:gap-16 text-[--white1] md:flex-row'>
       {links.map((link) => (
         <NavLink

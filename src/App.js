@@ -10,7 +10,25 @@ import Research from './component/aboutpages/research/Research';
 import Home from './pages/home/Home';
 import Digital from './component/aboutpages/digital/Digital';
 import Carer from './component/carer/Carer';
+import Apply from './component/apply/Apply';
+import { useEffect, useState } from 'react';
+import axios from './api/axios';
 function App() {
+  const [data, setData] = useState([])
+   async  function  getData() {
+   
+    try {
+      const response = await axios.get('/jobs');
+      setData(response.data); // Log the data to the console
+    } catch (error) {
+      console.error('Error fetching data:', error); // Handle errors gracefully
+    }
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="App">
        <Router>
@@ -26,8 +44,8 @@ function App() {
            <Route path='/about/reasearch'   element={<Research/>} />
            <Route path='/about/communication'  />
            <Route path='/contact' element={<Contact />} />
-           <Route path='/carer' element={<Carer />} />
-
+           <Route path='/carer/' element={<Carer data={data} />} />
+           <Route path='/carer/apply/:id' element={<Apply data={data} />} />
         </Routes>
        </Router>
      

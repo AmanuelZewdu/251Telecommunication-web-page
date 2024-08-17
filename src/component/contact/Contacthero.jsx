@@ -1,6 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Contacthero.css'
+import axios from '../../api/axios'
 const Contacthero = () => {
+   const CONTACT_URL= '/contact'
+  const [full_name, setFullName] = useState('')
+   const [email, setEmail] = useState('')
+   const [message, setMessage] = useState('')
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+     try {
+      const response = axios.post(CONTACT_URL, 
+        JSON.stringify({full_name, email, message}),
+        {
+          headers:{
+            "Content-Type": 'application/json'
+          }
+        }
+        )
+        console.log(response.data)
+        alert("emailed sucessfully")
+     } catch (error){
+      console.log(error)
+     }
+    }
+      
+    
+  
+  
+  
+  
   return (
     <section className="contact-wrapper">
       <div className="contact-container flex flex-col md:flex-row items-center p-10 py-20 justify-between">
@@ -19,11 +47,12 @@ const Contacthero = () => {
       </div>
       <div className="contact-right w-[100%] flex-col justify-end flex gap-4 ml-[15%]">
         <h3 className='text-[--white] font-[500]'>Contact Us Today</h3>
-         <input className='md:w-[50%] w-[80%] p-2 border-none' type='text' placeholder='Name'  />
-         <input className='md:w-[50%] w-[80%]  p-2  border-none' type='text' placeholder='Email' />
-         <input className='md:w-[50%] w-[80%]  p-2 h-[6rem]  border-none' type='text' placeholder='Your MESSAGE' />
+         <form className='flex-col justify-end flex gap-4' onSubmit={handleSubmit}>
+         <input className='md:w-[50%] w-[80%] p-2 border-none' required type='text' placeholder='Name' onChange={e => {setFullName(e.target.value)}}  />
+         <input className='md:w-[50%] w-[80%]  p-2  border-none' required type='text' placeholder='Email' onChange={e => {setEmail(e.target.value)}} />
+         <input className='md:w-[50%] w-[80%]  p-2 h-[6rem]  border-none'  required type='text' placeholder='Your MESSAGE' onChange={e => {setMessage(e.target.value)}} />
          <button className='bg-[--yellow]  w-[80%] p-2 md:w-[50%] text-[--white]'>REQUEST A CALL BACK</button>
-        
+         </form>
       </div>
       </div>
 
