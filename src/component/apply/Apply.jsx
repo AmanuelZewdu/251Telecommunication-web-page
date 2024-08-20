@@ -1,13 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Mainheader from '../Aboutheader/Mainheader'
 import axios from '../../api/axios'
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 const Apply = ({data}) => {
     
-    const [firstName, setFirstName] = useState('')
+    
+   console.log(data._id)
+  
+  const [firstName, setFirstName] = useState('')
     const [focusFirstName, setFocusFirstName]= useState(false)
       
     const [lastName, setLastName] = useState('')
@@ -22,6 +26,7 @@ const Apply = ({data}) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [error, setError] = useState(null);
     const userRef = useRef()
+    const navigate = useNavigate()
 
     // useEffect(() => {
     //     userRef.current.focus()
@@ -57,11 +62,13 @@ const handleFileChange = (event) => {
           const response =  await axios.post(`/jobs/apply/` + id, formData, {
             headers: {
               "Content-Type": "multipart/form-data"
+
             },
             withCredentials : true
           })
           console.log(response.data)
           alert("applied sucessfully")
+           navigate('/carer')
          } catch (error) {
         console.log(error,'error' )
          }
@@ -75,8 +82,8 @@ const handleFileChange = (event) => {
       <Mainheader />
       
         <div className='container  m-auto bg-white w-[80%] md:w-[50%]'>
-          <h1 className='text-[--black] text-[2rem] p-6 flex justify-center'>Welcome to Job Apply Form</h1>  
-      <form className='flex flex-col  justify-center align-middle p-20 gap-6' onSubmit={e => handleApply(e, data._id)} >
+          <h1 className='text-[--black] text-[2rem] p-6 flex justify-center mt-8'>Welcome to Job Apply Form</h1>  
+      <form className='flex flex-col  justify-center align-middle p-20 gap-6' onSubmit={e => handleApply(e, data[0]._id)} >
      <label htmlFor="firstname">First Name:</label>
       <input 
       type="text"

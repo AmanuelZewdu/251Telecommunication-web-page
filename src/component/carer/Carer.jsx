@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import axios from "../../api/axios";
 import { useEffect, useState } from "react";
 const Carer = ( {data}) => {
-    //  const [data, setData] = useState([])
+    
+  
+  
+  //  const [data, setData] = useState([])
     // async function getData() {
     //     try {
     //       const response = await axios.get('/jobs');
@@ -18,7 +21,7 @@ const Carer = ( {data}) => {
     //     getData()
     //   })
       
-     console.log(data)
+    
 
   return (
     <section className="bg-[--white]">

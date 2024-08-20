@@ -28,7 +28,8 @@ function App() {
   useEffect(() => {
     getData()
   }, [])
-
+  
+   console.log(data.title)
   return (
     <div className="App">
        <Router>
