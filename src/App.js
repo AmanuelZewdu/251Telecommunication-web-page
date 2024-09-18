@@ -13,6 +13,8 @@ import Carer from './component/carer/Carer';
 import Apply from './component/apply/Apply';
 import { useEffect, useState } from 'react';
 import axios from './api/axios';
+import NewsHero from './component/news/NewsHero';
+import News from './pages/news/News';
 function App() {
   const [data, setData] = useState([])
    async  function  getData() {
@@ -35,8 +37,8 @@ function App() {
        <Router>
        <Routes>
            <Route path='/' element={<Home/>} />
-           <Route path='/culture' element={<Culture/>} />
            <Route path='/about' element={<About/>} />
+           <Route path='/news' element={<News />} />
            <Route path='/about/expermental' element={<Expermental />}  />
            <Route path='/about/creative' element={<Creative/>}  />
            <Route path='/about/digital' element={<Digital />}  />

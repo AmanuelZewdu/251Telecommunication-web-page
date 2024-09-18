@@ -5,10 +5,14 @@ import { motion } from 'framer-motion';
 import { FcMenu } from "react-icons/fc";
 import { IoMdClose } from "react-icons/io";
 import  Logo from '../../asset/logo.png'
-import { NavLink , useLocation} from 'react-router-dom';
+import { Link, NavLink , useLocation} from 'react-router-dom';
+import { ArrowDropDown } from '@mui/icons-material';
+import { Menu, MenuItem } from '@mui/material';
 const Mainheader = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [clientWidth, setClientWidth] = useState(typeof document !== 'undefined' ? document.documentElement.clientWidth : 0)
+  const [aboutAnchorEl, setAboutAnchorEl] = useState(null); // State for the "About" dropdown menu
+
   useEffect(() => {
     const handleResize = () => setClientWidth(document.documentElement.clientWidth);
     window.addEventListener('resize', handleResize);
@@ -36,59 +40,90 @@ const Mainheader = () => {
     const location = useLocation()
     const links = [
       { path: '/', text: 'Home' },
-      { path: '/culture', text: 'Culture' },
       { path: '/about', text: 'About' },
       { path: '/clients', text: 'Clients' },
       { path: '/news', text: 'News' },
       { path: '/contact', text: 'Contact' },
       { path: '/carer', text: 'Carer' },
     ];
+    
+     // Handlers for the About dropdown menu
+  const handleAboutClick = (event) => {
+    setAboutAnchorEl(event.currentTarget);
+  };
+
+  const handleAboutClose = () => {
+    setAboutAnchorEl(null);
+  };
+    
  
     return (
     <section className="header-wrapper bg-[--white] ">
-    <div className="header-container p-[40px] md:p-[70px] px-[40px] flex justify-between  ">
-       
-       <motion.img variants={containerVariants}
-      whileHover="hover"  src={Logo} className='w-[7rem] h-[25%]  hover:cursor-pointer' alt='logo'/>
-       
-     <div style={getMenustyle(menuOpen, clientWidth)} className='navbar  absolute   bg-[#DFDFDE] z-10 p-10 right-0 md:right-[22%] lg:right-[20%] md:ml-0 md:bg-transparent  px-24'>
-     <ul className='flex flex-col gap-6 p-4 m-0   items-center justify-center md:gap-3 lg:gap-8 xl:gap-16 text-[--black
-     ] md:flex-row'>
-      {links.map((link) => (
-        <NavLink
-          key={link.path} 
-          to={link.path}
-          className={`
-            hover:cursor-pointer hover:text-[--yellow]
-            ${location.pathname === link.path ? 'text-[--yellow]' : ''}
-          `}
+        <div className="header-container p-10 md:p-[70px] md:px-[40px] flex items-center justify-between">
+        <motion.img
+          variants={containerVariants}
+          whileHover="hover"
+          src={Logo}
+          className="w-[6rem] h-[10%] text-[--white] hover:cursor-pointer"
+          alt="logo"
+        />
+
+        <div
+          style={getMenustyle(menuOpen, clientWidth)}
+          className="navbar absolute z-50 bg-[--brown] p-10 right-0 md:right-[22%] lg:right-[20%] md:ml-0 md:bg-transparent px-24"
         >
-          <motion.li variants={containerVariants} whileHover="hover">
-            {link.text}
-          </motion.li>
-        </NavLink>
-      ))}
-    </ul>
-</div>
-  <div className="header-icons hidden md:flex items-center justify-center gap-8 text-[--black]">
-  <motion.div variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]' >
-  <CiDesktop   size={45} />
-  </motion.div>
- <motion.div variants={containerVariants}
-      whileHover="hover" className='hover:cursor-pointer hover:text-[--yellow]'> 
-  <CiMobile3  size={45}/>
-  </motion.div>
-  </div>
+          <ul
+            className={`flex flex-col text-[.8rem] gap-6 p-4 m-0 items-center justify-center md:gap-3 lg:gap-8 xl:gap-12 text-[--black] md:flex-row `}
+          >
+            {links.map((link) =>
+              link.text === 'About' ? (
+                <li key={link.path}>
+                  
+                  <Link to='/about' className={`${location.pathname === '/about' ? 'text-[--yellow]' : ''}`} style={{ color: location.pathname === '/about' ? 'var(--yellow)' : 'inherit' }}>About</Link>
+                  <button
+                    aria-controls="about-menu"
+                    aria-haspopup="true"
+                    onClick={handleAboutClick}
+                    
+                  ><ArrowDropDown /> {/* Icon added next to "About" */}
+                  </button>
+                  <Menu
+                    id="about-menu"
+                    anchorEl={aboutAnchorEl}
+                    open={Boolean(aboutAnchorEl)}
+                    onClose={handleAboutClose}
+                  >
+                    <MenuItem><Link to='/about/expermental'>expermental</Link></MenuItem>
+                    <MenuItem ><Link to='/about/creative'>creative</Link></MenuItem>
+                    <MenuItem><Link to='/about/digital'>digital</Link></MenuItem>
+                    <MenuItem><Link to='/about/pr'>pr</Link></MenuItem>
+                    <MenuItem><Link to='/about/production'>production</Link></MenuItem>
+                    <MenuItem><Link to='/about/research'>research</Link></MenuItem>
+                  </Menu>
+                </li>
+              ) : (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={`hover:cursor-pointer hover:text-[--yellow] ${
+                    location.pathname === link.path ? 'text-[--yellow]' : ''
+                  }`}
+                >
+                  <motion.li variants={containerVariants} whileHover="hover">
+                    {link.text}
+                  </motion.li>
+                </NavLink>
+              )
+            )}
+          </ul>
+        </div>
 
-  <button className=' absolute right-2 text-[--black] mt-2  z-50  flex md:hidden  ' onClick={() => setMenuOpen((prev) => !prev) }>
- {menuOpen ? <IoMdClose size={35} /> :  <FcMenu size={35} /> 
-} 
-  </button>
+        <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
 
-     
-
-    </div>
+        <button className="absolute right-2 z-50 flex md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
+          {menuOpen ? <IoMdClose size={35} /> : <FcMenu size={35} />}
+        </button>
+      </div>
  </section>
   )
 }
