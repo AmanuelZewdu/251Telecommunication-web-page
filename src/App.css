@@ -7,11 +7,13 @@
 --black1: #121212d0;
 --white: #FDEFF4;
 --yellow:  #F9AA19;
---red: #FF0000;
+--red: #DD4A48;
 --white1: #fdeff469;
 --orange: #FF8225;
 --brown: #76453B;
-
+--gray: #B3AEAD;
+--blue:  #070675;
+--pink: #F8C8DC;
 
 }
 
@@ -65,6 +67,48 @@ body{
 
 .slick-dots li.slick-active button {
   background-color: var(--white); /* Color for active dot */
+}
+
+.rotating-container {
+  position: relative;
+  width: 300px; /* Adjust based on the desired circle size */
+  height: 300px; /* Adjust based on the desired circle size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate-container 20s infinite linear;
+}
+
+/* Individual rotating items */
+.rotating-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: rotate-item 20s infinite linear;
+}
+
+.rotating-item img {
+  width: 50px; /* Adjust image size */
+  height: 50px; /* Adjust image size */
+}
+
+@keyframes rotate-container {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-item {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg); /* Counter rotation to keep the items upright */
+  }
 }
 
 

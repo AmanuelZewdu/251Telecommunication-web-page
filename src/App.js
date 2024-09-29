@@ -15,6 +15,10 @@ import { useEffect, useState } from 'react';
 import axios from './api/axios';
 import NewsHero from './component/news/NewsHero';
 import News from './pages/news/News';
+import ViewDetail from './component/aboutpages/ViewDetail/ViewDetail';
+import Client from './component/client/Client';
+import Pr from './component/aboutpages/Pr/Pr';
+
 function App() {
   const [data, setData] = useState([])
    async  function  getData() {
@@ -42,13 +46,15 @@ function App() {
            <Route path='/about/expermental' element={<Expermental />}  />
            <Route path='/about/creative' element={<Creative/>}  />
            <Route path='/about/digital' element={<Digital />}  />
-           <Route path='/about/pr'  />
+           <Route path='/about/pr' element={<Pr />} />
            <Route path='/about/production' element={<Production/>} />
-           <Route path='/about/reasearch'   element={<Research/>} />
+           <Route path='/about/research'   element={<Research/>} />
            <Route path='/about/communication'  />
+           <Route path='/clients' element={<Client />} />
            <Route path='/contact' element={<Contact />} />
            <Route path='/carer/' element={<Carer data={data} />} />
            <Route path='/carer/apply/:id' element={<Apply data={data} />} />
+           <Route path='/about/creative/viewdetail' element={<ViewDetail/>} />
         </Routes>
        </Router>
      

@@ -6,31 +6,10 @@ const Research = () => {
     const location = useLocation();
     return (
     <section className="research-wrapper bg-[--white]  bg-cover text-[--black] p-0" >
-   <Mainheader />
-   <div className="header-sub-menu hover:cursor-pointer  grid  grid-cols-3 md:grid-cols-3 lg:grid-cols-6   align-middle justify-center px-5 md:px-20  p-10">
-          <NavLink to='/about/expermental' className={`border-[1px] text-[--black]  border-solid border-[--black] px-6 text-center ${location.pathname === '/about/expermental' ? 'border-[--yellow]' : ''} `}>
-            <p>Experimental</p>
-          </NavLink>
-          <NavLink to='/about/creative'   className={`border-[1px]  text-[--black] border-solid border-[--black] px-6 text-center w-[100%] ${location.pathname === '/about/creative' ? 'bg-black text-[--white]' : ''}`}>
-            <p>Creative</p>
-          </NavLink>
-          <NavLink to='/about/digital' className='border-[1px] text-[--black] border-solid border-[--black] px-6 text-center w-[100%]'>
-            <p>Digital</p>
-          </NavLink>
-          <NavLink to='/about/pr' className='border-[1px] text-[--black] border-solid border-[--black] px-6 text-center w-[100%]'>
-            <p>PR</p>
-          </NavLink>
-          
-          <NavLink to='/about/production' className='border-[1px] text-[--black] border-solid border-[--black] px-6 text-center w-[100%]'>
-            <p>Production</p>
-          </NavLink>
-          <NavLink to='/about/reasearch' className={`border-[1px] text-[--black] border-solid border-[--black] px-6 text-center w-[100%] ${location.pathname === '/about/reasearch' ? 'bg-[--brown] text-[white]' : ''}`}>
-            <p>Reasearch</p>
-          </NavLink>
-       
-        </div>
-        <div className="reasearch-container p-4 m-0 md:p-0">
-         <div className='p- flex flex-col gap-4 w-[100%] md:w-[50%] md:ml-[5%] pt-[15%]'>
+     <Mainheader />
+     <div className="reasearch-container p-4 m-0 md:p-0">
+         <div className='p- flex flex-col gap-4 w-[100%] md:w-[50%] md:ml-[5%] pt-[5%]'>
+          <h1 className='text-[--yellow] text-[2rem] font-700'>Fun Fact</h1>
          <p className='text-[--brown] text-[1.2rem] '>
          Our research services deliver valuable insights for informed
 marketing strategies. We cover market analysis, consumer

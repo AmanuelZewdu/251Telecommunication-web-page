@@ -94,13 +94,14 @@ const Header = () => {
                     anchorEl={aboutAnchorEl}
                     open={Boolean(aboutAnchorEl)}
                     onClose={handleAboutClose}
+                    className='p-8'
                   >
-                    <MenuItem><Link to='/about/expermental'>expermental</Link></MenuItem>
-                    <MenuItem ><Link to='/about/creative'>creative</Link></MenuItem>
-                    <MenuItem><Link to='/about/digital'>digital</Link></MenuItem>
-                    <MenuItem><Link to='/about/pr'>pr</Link></MenuItem>
-                    <MenuItem><Link to='/about/production'>production</Link></MenuItem>
-                    <MenuItem><Link to='/about/research'>research</Link></MenuItem>
+                    <MenuItem><Link to='/about/expermental'>Expermental</Link></MenuItem>
+                    <MenuItem ><Link to='/about/creative'>Creative</Link></MenuItem>
+                    <MenuItem><Link to='/about/digital'>Digital</Link></MenuItem>
+                    <MenuItem><Link to='/about/pr'>Pr</Link></MenuItem>
+                    <MenuItem><Link to='/about/production'>Production</Link></MenuItem>
+                    <MenuItem><Link to='/about/research'>Research</Link></MenuItem>
                   </Menu>
                 </li>
               ) : (
@@ -120,7 +121,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+        <Link to='/contact'><button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button></Link>
 
         <button className="absolute right-2 z-50 flex md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
           {menuOpen ? <IoMdClose size={35} /> : <FcMenu size={35} />}

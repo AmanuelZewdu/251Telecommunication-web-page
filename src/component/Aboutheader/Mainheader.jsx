@@ -118,7 +118,7 @@ const Mainheader = () => {
           </ul>
         </div>
 
-        <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+       <Link to='/contact'> <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button></Link>
 
         <button className="absolute right-2 z-50 flex md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
           {menuOpen ? <IoMdClose size={35} /> : <FcMenu size={35} />}
