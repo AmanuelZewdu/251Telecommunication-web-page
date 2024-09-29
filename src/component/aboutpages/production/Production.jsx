@@ -6,7 +6,7 @@ const Production = () => {
   return (
     <section className='production-container p-0 m-0'>
         <Header /> 
-        <Aboutheader />
+        
         <p>
           
         </p>

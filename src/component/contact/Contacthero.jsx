@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react'
 import '../styles/Contacthero.css'
 import axios from '../../api/axios'
+import Header from '../header/Header'
 const Contacthero = () => {
    const CONTACT_URL= '/contact'
   const [full_name, setFullName] = useState('')
@@ -30,29 +32,31 @@ const Contacthero = () => {
   
   
   return (
-    <section className="contact-wrapper">
-      <div className="contact-container flex flex-col md:flex-row items-center p-10 py-20 justify-between">
-      <div className="contact-left w-[100%] justify-start flex flex-col p-10 gap-4 ">
+    <section className="contact-wrapper overflow-x-hidden">
+        <Header />
+      <div className="contact-container flex flex-col lg:flex-row items-center p-10 py-20 justify-between">
+      <div className="contact-left  flex flex-col p-10 gap-4 ">
         <div className="contact-left-top flex items-center justify-center gap-12 p-4 align-middle">
-          <h1 className='text-[5.5rem] text-[--white] font-bold leading-[4.4rem]'>
+          <h1 className='md:text-[5.5rem] text-[4.5rem] leading-[4rem]  text-[--white] font-[1000] md:leading-[4.2rem]'>
             NOW <br/> WE'RE<br/>TALKING
           </h1>
-          <h2 className='text-[--white] text-[10rem] font-bold mb-4' > {'>'}</h2>
+          <h2 className='text-[--white] md:text-[10rem] text-[8rem] font-[1000] mb-4' > {'>'}</h2>
         </div>
-        <p className='text-[--white] font-[bold] text-[1rem]'> WE SEEK PASSINATE COLLABRRO-CLIENTS DEDICATED TO THEIR PRODUCTS AND CUSTOMERS, REQUEST A CALL BACK AND TALENTED
-         INDIVISUALS STRIVING FOR EXCELLENCE.CONTACT US FOR BUSINESS, PRESS
-         ET'S CREATE REMARKABLE WORK TOGETHER.</p>
+        <p className='text-[--white] font-[bold] text-[.8rem] w-[70%]'> 
+         WE SEEK PASSINATE COLLABRRO-CLIENTS DEDICATED TO THEIR PRODUCTS AND CUSTOMERS, REQUEST ACALL BACK AND TALENTED
+         INDIVISUALS STRIVING FOR EXCELLENCE.CONTACT US FOR BUSINESS, PRESS LT'S CREATE REMARKABLE WORK TOGETHER.
+         </p>
           
          
       </div>
-      <div className="contact-right w-[100%] flex-col justify-end flex gap-4 ml-[15%]">
-        <h3 className='text-[--white] font-[500]'>Contact Us Today</h3>
-         <form className='flex-col justify-end flex gap-4' onSubmit={handleSubmit}>
-         <input className='md:w-[50%] w-[80%] p-2 border-none' required type='text' placeholder='Name' onChange={e => {setFullName(e.target.value)}}  />
-         <input className='md:w-[50%] w-[80%]  p-2  border-none' required type='text' placeholder='Email' onChange={e => {setEmail(e.target.value)}} />
-         <input className='md:w-[50%] w-[80%]  p-2 h-[6rem]  border-none'  required type='text' placeholder='Your MESSAGE' onChange={e => {setMessage(e.target.value)}} />
-         <button className='bg-[--yellow]  w-[80%] p-2 md:w-[50%] text-[--white]'>REQUEST A CALL BACK</button>
-         </form>
+      <div className="contact-right  flex-col justify-between  flex gap-2 mr-[10%] p-10">
+        <h3 className='text-[--white] font-[700]'>Contact Us Today</h3>
+         <form className='flex-col justify-end text-[1rem] flex gap-4' onSubmit={handleSubmit}>
+         <input className='md:w-[18rem]  w-[20rem] p-2 border-none' required type='text' placeholder='Name' onChange={e => {setFullName(e.target.value)}}  />
+         <input className='md:w-[18rem]  w-[20rem]  p-2  border-none' required type='text' placeholder='Email' onChange={e => {setEmail(e.target.value)}} />
+         <input className='md:w-[18rem]  w-[20rem]  p-2 h-[6rem]  border-none'  required type='text' placeholder='Your MESSAGE' onChange={e => {setMessage(e.target.value)}} />
+         <button className='bg-[--yellow] text-[1rem] w-[20rem] p-2 md:w-[18rem] text-[--white]'>REQUEST A CALL BACK</button>
+         </form> 
       </div>
       </div>
 

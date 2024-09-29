@@ -5,8 +5,7 @@ import Header from '../../component/header/Header'
 const Contact = () => {
   return (
     <div>
-        <Header />
-        <Contacthero />
+      <Contacthero />
     </div>
   )
 }
