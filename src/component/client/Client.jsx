@@ -56,13 +56,12 @@ const Client = () => {
   return (
     <motion.section
       style={{ backgroundImage }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 text-gray-200"
+      className=" place-content-center min-h-screen overflow-hidden  bg-gray-950  text-gray-200"
     >
-     <Header />   
-     <div className="client-container">
-       <div className='p-20'>
-        <h1 className='text-[3rem] text-[--white] font-[500] '>WHO WE ARE...</h1>
-        <div className='bg-[--white] p-6  grid grid-cols-8' >
+    <div className="client-container px-4">
+       <div className=' p-10 md:p-20'>
+        <h1 className='text-[2.8rem] md:text-[3rem] h-full text-[--white] font-[500] '>WHO WE ARE...</h1>
+        <div className='client-logos bg-[--white] p-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4' >
        <motion.img src={ClientLogo1} alt="client" className='w-[80%]' whileHover={{ scale: 1.1 }}transition={{ type: "spring", stiffness: 300 }}/>
         <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo2} alt="client" className='w-[80%]'/>
         <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo3} alt="client" className='w-[80%]'/>

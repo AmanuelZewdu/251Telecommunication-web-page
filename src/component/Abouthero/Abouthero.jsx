@@ -91,20 +91,20 @@ const Abouthero = () => {
   };
   return (
    <section className="about-wrapper">
-    <div className="about-container p-[40px] px-[80px]">
+    <div className="about-container p-[40px]  md:px-[80px]">
     <div className="team-container flex flex-col">
      {!selectedMember && (
 
       <div className="flex-col">
-        <h1 className="text-[4rem] text-[--white] font-[700]">MEET OUR TEAM</h1>
-        <h3 className="text-[2rem] text-[--yellow] font-[700]">THE TEAM IS OUR GREATEST ASSET</h3>
+        <h1 className=" text-[3.5rem] md:text-[4rem]  text-[--white] font-[700]">MEET OUR TEAM</h1>
+        <h3 className=" text-[1.8rem] md:text-[2rem] text-[--yellow] font-[700]">THE TEAM IS OUR GREATEST ASSET</h3>
       </div>
        )
      }
 
       <div className="flex flex-col mt-16">
         <h3 className="text-[2rem] text-[--white] font-[500]">TEAM</h3>
-        <div className="image-container flex mt-10 gap-8">
+        <div className="image-container flex flex-wrap md:flex-nowrap mt-10 gap-8">
           {teamMembers.map((member) => (
             <div
               key={member.id}
@@ -112,7 +112,7 @@ const Abouthero = () => {
               onClick={() => handleMemberClick(member)}
             >
               <img src={member.imgSrc} alt={member.name} className="w-[100%] rounded-[50%]" />
-              <span className="text-[--white] text-[1.3rem] font-[700]">{member.name}</span>
+              <span className="text-[--white] text-[1.1rem] md:text-[1.3rem] font-[700]">{member.name}</span>
             </div>
           ))}
         </div>
@@ -135,7 +135,7 @@ const Abouthero = () => {
     </div>
       </div>
 
-      <div className="mission-container flex flex-col items-center justify-center p-10 mt-20">
+      <div className="mission-container flex flex-col items-center justify-center p2 md:p-10 mt-20">
         <div className='w-[50%]'>
         <img src={Mission} alt="mission" className='w-[100%]' />
         <div className='text-[--yellow] mt-[10%]'>
@@ -161,7 +161,7 @@ const Abouthero = () => {
       
     </div>
 
-    <div className="vision-container flex flex-col items-center justify-center p-10 mt-20">
+    <div className="vision-container flex flex-col items-center justify-center p-2 md:p-10 mt-20">
         <div className='w-[50%]'>
         <img src={Vision} alt="mission" className='w-[100%]' />
         <div className='text-[--yellow] mt-[10%]'>
@@ -187,7 +187,7 @@ const Abouthero = () => {
       
     </div>
 
-    <div className="values-container flex flex-col items-center justify-center p-10 mt-20">
+    <div className="values-container flex flex-col items-center justify-center p-2 md:p-10 mt-20">
         <div className='w-[50%]'>
         <img src={Values} alt="mission" className='w-[100%]' />
         <div className='text-[--yellow] mt-[10%]'>

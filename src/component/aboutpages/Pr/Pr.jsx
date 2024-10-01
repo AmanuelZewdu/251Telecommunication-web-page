@@ -62,14 +62,14 @@ const Pr = () => {
   return (
     <section className="pr-wrapper bg-[--white] overflow-x-hidden">
       <Mainheader /> 
-      <Slider {...settings} className='flex m-0 items-center justify-between px-[3rem]'>
-  <div className='flex items-center justify-center h-[100%] w-full mx-auto'>
+      <Slider {...settings} className='flex m-0 items-center h-[100svh] md:h-auto justify-between px-[3rem]'>
+  <div className='flex items-center justify-center h-[100svh] w-full mx-auto'>
     <img src={PR1} alt="" />
   </div>
-  <div className='flex items-center justify-center h-[100%] w-full mx-auto'>
+  <div className='flex items-center justify-center h-[100svh] w-full mx-auto'>
   <img src={PR2} alt="" />
   </div>
-  <div className='flex items-center justify-center h-[100%] w-full mx-auto'>
+  <div className='flex items-center justify-center h-[100svh] w-full mx-auto'>
   <img src={PR3} alt="" />
   </div>
 </Slider> 

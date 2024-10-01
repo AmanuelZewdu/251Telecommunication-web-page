@@ -18,6 +18,7 @@ import News from './pages/news/News';
 import ViewDetail from './component/aboutpages/ViewDetail/ViewDetail';
 import Client from './component/client/Client';
 import Pr from './component/aboutpages/Pr/Pr';
+import ClientPage from './pages/Client/ClientPage';
 
 function App() {
   const [data, setData] = useState([])
@@ -50,7 +51,7 @@ function App() {
            <Route path='/about/production' element={<Production/>} />
            <Route path='/about/research'   element={<Research/>} />
            <Route path='/about/communication'  />
-           <Route path='/clients' element={<Client />} />
+           <Route path='/clients' element={<ClientPage />} />
            <Route path='/contact' element={<Contact />} />
            <Route path='/carer/' element={<Carer data={data} />} />
            <Route path='/carer/apply/:id' element={<Apply data={data} />} />

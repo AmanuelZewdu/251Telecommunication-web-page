@@ -67,59 +67,60 @@ const Expermental = () => {
         <div className="flex flex-col items-center gap-10">
           {/* ATL Section */}
           <motion.div
-            className="flex items-center gap-12 px-4"
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={{ visible: { transition: groupTransition } }}
-          >
-            <span className="text-[--white]">ATL</span>
-            {[
-              { src: Tv, alt: "tv", label: "Tv" },
-              { src: Radio, alt: "radio", label: "Radio" },
-              { src: Print, alt: "print", label: "Print" },
-              { src: Ooh, alt: "ooh", label: "Ooh" },
-              { src: Digitalads, alt: "digital ads", label: "Digital Ads" },
-              { src: Events, alt: "events", label: "Events" },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center justify-center gap-4"
-                variants={itemVariants}
-              >
-                <img src={item.src} alt={item.alt} className="w-[80%]" />
-                <span className="text-[--white] text-[.8rem]">{item.label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
+        
+         className="flex flex-col md:flex-row  items-center gap-12 px-4"
+         initial="hidden"
+         animate="visible"
+         exit="exit"
+         variants={{ visible: { transition: groupTransition } }}
+       >
+         <span className="text-[2rem] md:text-[1.2rem] text-[--white]">ATL</span>
+         {[
+           { src: Tv, alt: "tv", label: "Tv" },
+           { src: Radio, alt: "radio", label: "Radio" },
+           { src: Print, alt: "print", label: "Print" },
+           { src: Ooh, alt: "ooh", label: "Ooh" },
+           { src: Digitalads, alt: "digital ads", label: "Digital Ads" },
+           { src: Events, alt: "events", label: "Events" },
+         ].map((item, index) => (
+           <motion.div
+             key={index}
+             className="flex items-center justify-center gap-4 w-[100%] md:w-auto" // Full width on small screens, auto on medium screens
+             variants={itemVariants}
+           >
+             <img src={item.src} alt={item.alt} className="w-[50%] md:w-[80%]" />
+             <span className="text-[--white] text-[1.2rem] md:text-[.8rem]">{item.label}</span>
+           </motion.div>
+         ))}
+       </motion.div>
 
           {/* Horizontal Divider Line */}
           <hr className="w-full border-t border-[--white] m-0" />
 
           {/* BTL Section */}
           <motion.div
-            className="flex items-center text-[--yellow] gap-12 m-0 px-4"
+            className="flex flex-col md:flex-row  items-center gap-12 px-4"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={{ visible: { transition: groupTransition } }}
           >
-            <span className="text-[--white]">BTL</span>
+            <span className=" text-[2rem] md:text-[1.2rem] text-[--white]">BTL</span>
             {[
               { src: DirectMarketing, alt: "direct marketing", label: "Direct Marketing" },
               { src: ExpermentalMarketing, alt: "expermental marketing", label: "Expermental Marketing" },
               { src: B2Bsales, alt: "b2b sales", label: "B2B Sales" },
               { src: GiveAways, alt: "giveaways", label: "Give Aways" },
               { src: SamlingCampaign, alt: "sampling campaign", label: "Sampling Campaign" },
-              { src: Events, alt: "events", label: "Events" },
+              { src: SamlingCampaign, alt: "sampling campaign", label: "Sampling Campaign" },
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-center gap-4"
+                className="flex items-center justify-center gap-4 w-[100%] md:w-auto"
                 variants={itemVariants}
               >
-                <img src={item.src} alt={item.alt} className="w-[80%]" />
-                <span className="text-[--white] text-[.8rem]">{item.label}</span>
+                <img src={item.src} alt={item.alt} className=" w-[50%] md:w-[80%]" />
+                <span className="text-[--white] text-[1.2rem] md:text-[.8rem]">{item.label}</span>
               </motion.div>
             ))}
           </motion.div>
