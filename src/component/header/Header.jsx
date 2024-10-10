@@ -29,7 +29,7 @@ const Header = () => {
     { path: '/about', text: 'About' }, // Will have a dropdown
     { path: '/clients', text: 'Clients' },
     { path: '/news', text: 'News' },
-    { path: '/contact', text: 'Contact' },
+    // { path: '/contact', text: 'Contact' },
     { path: '/carer', text: 'Carer' },
   ];
 

@@ -1,7 +1,8 @@
-.contact-wrapper{
+
+.contact-wrapper {
     background-image: url('../../asset/contact-img.png');
     background-position: center;
-    background-size: cover;
+    background-size: 100%; 
     background-repeat: no-repeat;
-    
+    background-attachment: fixed; 
 }

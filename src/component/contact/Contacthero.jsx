@@ -35,20 +35,23 @@ const Contacthero = () => {
     <section className="contact-wrapper overflow-x-hidden">
         <Header />
       <div className="contact-container flex flex-col lg:flex-row items-center p-2 sm:p-10 py-20 justify-center">
-      <div className="contact-left  flex flex-col p-4 md:p-10 gap-4 ">
-        <div className="contact-left-top flex items-center justify-center gap-12 px-6 p-4 align-middle">
-          <h1 className='md:text-[5.5rem] sm:text-[4.5rem] text-[3rem] leading-[4rem]  text-[--white] font-[1000] md:leading-[4.2rem]'>
-            NOW <br/> WE'RE<br/>TALKING
-          </h1>
-          <h2 className='text-[--white] md:text-[10rem] text-[6rem] sm:text-[8rem] font-[1000] mb-4' > {'>'}</h2>
-        </div>
-        <p className='text-[--white] font-[bold] w-full text-[.5rem] sm:text-[.8rem] sm:w-[70%]'> 
-         WE SEEK PASSINATE COLLABRRO-CLIENTS DEDICATED TO THEIR PRODUCTS AND CUSTOMERS, REQUEST ACALL BACK AND TALENTED
-         INDIVISUALS STRIVING FOR EXCELLENCE.CONTACT US FOR BUSINESS, PRESS LT'S CREATE REMARKABLE WORK TOGETHER.
-         </p>
-          
-         
-      </div>
+    
+      
+      <div className="contact-left flex flex-col p-4 md:p-10 gap-4" style={{ paddingLeft: '2rem' }}>
+  <div className="contact-left-top flex items-center justify-center gap-12 px-6  align-middle">
+    <h1 className='md:text-[5.5rem] sm:text-[4.5rem] text-[3rem] leading-[4rem] text-[--white] font-[1000] md:leading-[4.2rem]'>
+      NOW <br /> WE'RE<br />TALKING
+    </h1>
+    <h2 className='text-[--white] md:text-[10rem] text-[6rem] sm:text-[8rem] font-[1000] mb-4'>{'>'}</h2>
+  </div>
+  <p className='text-[--white] font-[bold] w-full text-[.5rem] sm:text-[.8rem] sm:w-[70%] pl-14'>
+    WE SEEK PASSIONATE COLLABORO-CLIENTS DEDICATED TO THEIR PRODUCTS AND CUSTOMERS. REQUEST A CALL BACK AND TALENTED
+    INDIVIDUALS STRIVING FOR EXCELLENCE. CONTACT US FOR BUSINESS, PRESS, AND LET'S CREATE REMARKABLE WORK TOGETHER.
+  </p>
+</div>
+
+
+
       <div className="contact-right  flex-col justify-between  flex gap-2 mr-[10%] p-10">
         <h3 className='text-[--white] font-[700]'>Contact Us Today</h3>
          <form className='flex-col justify-end text-[1rem] flex gap-4' onSubmit={handleSubmit}>
