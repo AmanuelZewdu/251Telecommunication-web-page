@@ -17,8 +17,10 @@ import NewsHero from './component/news/NewsHero';
 import News from './pages/news/News';
 import ViewDetail from './component/aboutpages/ViewDetail/ViewDetail';
 import Client from './component/client/Client';
+import Services from './component/ourService/Service';
 import Pr from './component/aboutpages/Pr/Pr';
 import ClientPage from './pages/Client/ClientPage';
+import Work from './component/work/Work';
 
 function App() {
   const [data, setData] = useState([])
@@ -53,9 +55,11 @@ function App() {
            <Route path='/about/communication'  />
            <Route path='/clients' element={<ClientPage />} />
            <Route path='/contact' element={<Contact />} />
+           <Route path='/work' element={<Work />} />
            <Route path='/carer/' element={<Carer data={data} />} />
            <Route path='/carer/apply/:id' element={<Apply data={data} />} />
            <Route path='/about/creative/viewdetail' element={<ViewDetail/>} />
+           <Route path='/services' element={<Services/>} />
         </Routes>
        </Router>
      

@@ -2,9 +2,9 @@ import React from 'react'
 import Mainheader from '../../Aboutheader/Mainheader'
 import Slider from "react-slick";
 
-import PR1 from '../../../asset/PR_Template-01.png'
-import PR2 from '../../../asset/PR_Template-04.png'
-import PR3 from '../../../asset/PR_Template-03.png'
+import PR1 from '../../../asset/PR.jpg'
+import PR2 from '../../../asset/PR.jpg'
+import PR3 from '../../../asset/PR.jpg'
 import ArrowLeftRoundedIcon from '@mui/icons-material/ArrowLeftRounded';
 import ArrowRightRoundedIcon from '@mui/icons-material/ArrowRightRounded';
 function SamplePrevArrow(props) {
@@ -61,7 +61,7 @@ const Pr = () => {
   };
   return (
     <section className="pr-wrapper bg-[--white] overflow-x-hidden">
-      <Mainheader /> 
+      {/* <Mainheader />  */}
       <Slider {...settings} className='flex m-0 items-center h-[100svh] md:h-auto justify-between px-[3rem]'>
   <div className='flex items-center justify-center h-[100svh] w-full mx-auto'>
     <img src={PR1} alt="" />

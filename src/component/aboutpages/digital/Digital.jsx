@@ -5,7 +5,7 @@ import Header from '../../header/Header'
 const Digital = () => {
   return (
     <section className="digital-top p-0 m-0">
-         <Header />
+         {/* <Header /> */}
         
           <div className="digital-content flex-col md:flex-row gap-16 md:gap-0 flex justify-between items-center p-16">
             <div className="digital-left">

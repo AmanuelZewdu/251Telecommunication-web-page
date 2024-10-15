@@ -1,7 +1,8 @@
 .digital-top{
     background-image: url('../../asset/digital-img.png');
     background-position: center;
-      background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
+    height:120svh;
+    /* background-size: 90%;  */
+    background-size: cover;
     }
