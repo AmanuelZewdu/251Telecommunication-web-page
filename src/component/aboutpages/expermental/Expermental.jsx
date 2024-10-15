@@ -61,7 +61,7 @@ const Expermental = () => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 text-gray-200"
     >
       {/* Main Header */}
-      <Header />
+      {/* <Header /> */}
 
       {/* Content Section */}
       <div className="relative flex-col z-10 p-10">

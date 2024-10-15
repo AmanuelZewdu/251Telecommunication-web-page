@@ -1,8 +1,60 @@
-.production-container{
-    background-image: url('../../asset/production-img.png');
+
+
+/* Production.css */
+
+.production-container {
+    background-image: url('../../asset/production.png');
     background-position: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 120svh;
+    height: 100vh;
+  }
+  
+  
+  
+  .production-content-wrapper {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute space between text and image */
+    gap: 2rem; /* Space between text and image */
+    height: 100%; /* Ensure it takes up the full height */
+  }
+  
+  .production-text {
+    flex: 1;
+    max-width: 32%;
+    text-align: left;
     
-}
+  }
+  
+  .production-image {
+    flex: 1; 
+  }
+  
+  .production-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    border-radius: 8px; /* Optional: add rounded corners to the image */
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .production-content-wrapper {
+      flex-direction: column; /* Stack text and image vertically */
+      justify-content: center; /* Vertically center content */
+    }
+  
+    .production-text {
+      max-width: 100%; /* Full width on mobile */
+      text-align: center; /* Center align text on smaller screens */
+    }
+  
+    .production-image {
+      margin-top: 2rem; /* Add some spacing between text and image */
+    }
+  }
+  
