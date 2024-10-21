@@ -65,12 +65,30 @@ const Expermental = () => {
 
       {/* Content Section */}
       <div className="relative flex-col z-10 p-10">
-        <h1 className="text-[--red] text-[1.7rem] font-[700] p-10">
-          THROUGH THE LINE <br /> COMMUNICATIONS <br /> TOUCH POINTS <br /> DESIGNED TO DELIVER A
-          360 <br />
-          BRAND <br /> EXPERIENCE.
-        </h1>
+     {/* <p>
 
+We are a full-fledged communications and public relations firm with offices in the  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area. At 251 Communications, we manage our international and local clients’ communications, marketing, research, logistics, media, PR, branding and production needs. We have partnerships with many of the  leading service research and media agencies inside and outside of Ethiopia.
+     </p> */}
+  <p className="text-[--red] text-[1.7rem] font-[400] p-10" style={{
+
+  marginLeft: '1rem',  
+  marginRight: '1rem', 
+  textAlign: 'justify' 
+}}>
+  We are a full-fledged communications and public relations firm with offices in the Addis Ababa, Ethiopia and Washington DC, Metropolitan Area. At 251 Communications, we manage our international and local clients’ communications, marketing, research, logistics, media, PR, branding and production needs. We have partnerships with many of the leading service research and media agencies inside and outside of Ethiopia.
+</p>
+
+
+
+
+
+        <h1 className="text-[--red] text-[1.7rem] font-[200] p-10"
+        style={{
+         
+          marginLeft: '1rem',  // Indent the block from the left
+          marginRight: '1rem', // Indent the block from the right
+          textAlign: 'justify' // Optional: Justifies the text for better alignment
+        }} > Through the line Communications Touch Points Designed a 360 Brand Experiance</h1>
         <div className="flex flex-col items-center gap-10">
           {/* ATL Section */}
           <motion.div

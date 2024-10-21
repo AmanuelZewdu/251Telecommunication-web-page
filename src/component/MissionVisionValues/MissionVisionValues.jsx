@@ -26,7 +26,7 @@ const MissionVisionValues = () => {
           <div className="flex flex-col items-center justify-center w-full">
             <img src={Mission} alt="mission" className="w-[100%]" />
             <div className="text-[--yellow] mt-5">
-              <ul className="list-disc text-center max-w-[600px] mx-auto">
+              <ul className="list-none text-center max-w-[600px] mx-auto">
                 <li>To provide a second to none marketing service to our customers</li>
                 <li>Delivering excellent customer experience</li>
                 <li>High customer satisfaction</li>
@@ -38,7 +38,7 @@ const MissionVisionValues = () => {
           <div className="flex flex-col items-center justify-center w-full">
             <img src={Vision} alt="vision" className="w-[100%]" />
             <div className="text-[--yellow] mt-5">
-              <ul className="list-disc text-center max-w-[600px] mx-auto">
+              <ul className="list-none text-center max-w-[600px] mx-auto">
                 <li>Becoming a global leader in marketing services</li>
                 <li>Revolutionizing the industry with innovation</li>
                 <li>Providing unmatched customer value</li>
@@ -50,7 +50,7 @@ const MissionVisionValues = () => {
           <div className="flex flex-col items-center justify-center w-full">
             <img src={Values} alt="values" className="w-[100%]" />
             <div className="text-[--yellow] mt-5">
-              <ul className="list-disc text-center max-w-[600px] mx-auto">
+              <ul className="list-none text-center max-w-[600px] mx-auto">
                 <li>Integrity in all we do</li>
                 <li>Honesty and transparency</li>
                 <li>Customer-centric approach</li>

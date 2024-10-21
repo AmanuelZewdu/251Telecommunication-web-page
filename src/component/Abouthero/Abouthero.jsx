@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
-import Addis from '../../asset/fantish.png'
-import A from '../../asset/A.png'
-import B from '../../asset/B.png'
-import C from '../../asset/C.png'
-import D from '../../asset/D.png'
-import E from '../../asset/E.png'
-import F from '../../asset/F.png'
+import Addis from '../../asset/Addis.jpg'
+import Bamlak from '../../asset/Bamlak.png'
+import Jhon from '../../asset/Jhon.png'
+import Naod from '../../asset/Naod.png'
+
+import Michael from '../../asset/Michael.png'
+import Biniam from '../../asset/Biniam.png'
 import Fantish from '../../asset/fantish.png'
 import Mission from '../../asset/Mission.png'
 import Vision from '../../asset/Vision.png'
@@ -48,7 +48,7 @@ function SampleNextArrow(props) {
       onClick={onClick}
       style={{
         color: "var(--yellow)",
-        fontSize: "4rem",  // Adjusted size for a more balanced look
+        fontSize: "4rem",  
         position: "absolute",
         right: "10px",  // Adds some space from the edge
         top: "50%",
@@ -77,19 +77,20 @@ const Abouthero = () => {
     { id: 1, name: 'Addis', imgSrc: Addis, role: 'CEO', 
     description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
  },
-    { id: 2, name: 'Fantish', imgSrc: Fantish, role: 'CEO', description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+    { id: 2, name: 'Fantawork samuel', imgSrc: Fantish, role: 'CEO', description: 'Fantawork brings a wealth of experience in strategic marketing, brand development, and stakeholder engagement. With a proven track record of managing cross-functional teams and driving successful business outcomes, she is a highly respected leader. As CEO of 251 Communications, her focus is on innovation, growth, and elevating brands within the Ethiopian and international markets.'
  },
-    { id: 3, name: 'Addis', imgSrc: A, role: 'CEO', description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+    { id: 3, name: 'Jhon', imgSrc: Jhon, role: '', description: ''
  },
-    { id: 4, name: 'Fantish', imgSrc: B, role: 'CEO',description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+    { id: 4, name: 'Naod Mulu', imgSrc: Naod, role: '',description: 'He brings a unique blend of creativity and technical expertise, shaping impactful visuals for leading Ethiopian brands. His ability to lead creative campaigns across diverse sectors has positioned him as a key contributor to innovative marketing strategies at 251 Communications.'
 },
-    { id: 5, name: 'Addis', imgSrc: C, role: 'CEO', description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+    { id: 5, name: 'Bamlak Abebayehu', imgSrc: Bamlak, role: '', description: 'A dynamic digital lead with a strong tech background, he has a proven track record in digital transformation and user engagement. Known for wearing many hats and supporting every department, he is a great leader passionate about merging creativity with analytics to drive innovation.'
  },
-    { id: 6, name: 'Fantish', imgSrc: D, role: 'CEO', description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+    { id: 6, name: 'Michael Mekonne', imgSrc: Michael, role: '', description: 'Michael Mekonne manages client relationships and ensures the successful execution of communication strategies at 251 Communications. With experience spanning technology, healthcare, and entertainment, he plays a pivotal role in driving business growth and maintaining client satisfaction.'
  },
- ,
-    { id: 6, name: 'Fantish', imgSrc: E, role: 'CEO', description: 'AS CEO OF \"251 COMMUNICATION AND MARKETING PLC,\" FANTISH DRIVES THE COMPANY\'S VISION AND GROWTH, ENSURING ALL OPERATIONS ALIGN WITH ITS STRATEGIC OBJECTIVES AND LONG-TERM SUCCESS.'
+ { id: 7, name: 'Biniyam Lemma ', imgSrc: Biniam, role: '', description: 'As Experiential expert, specializes in Below the Line (BTL) marketing, delivering memorable brand experiences. His expertise in leading teams and executing high-impact projects ensures that every activation leaves a lasting impression on both clients and audiences.'
+
  },
+ 
   ];
   const [selectedMember, setSelectedMember] = useState(null);
  
@@ -280,14 +281,14 @@ const Abouthero = () => {
      {!selectedMember && (
 
       <div className="flex-col">
-        <h1 className=" text-[3.5rem] md:text-[4rem]  text-[--white] font-[700]">MEET OUR TEAM</h1>
-        <h3 className=" text-[1.8rem] md:text-[2rem] text-[--yellow] font-[700]">THE TEAM IS OUR GREATEST ASSET</h3>
+        <h1 className=" text-[3.5rem] md:text-[4rem]  text-[--white] font-[700]">THE TEAM IS OUR GREATEST ASSET</h1>
+ 
       </div>
        )
      }
 
       <div className="flex flex-col mt-16">
-        <h3 className="text-[2rem] text-[--white] font-[500]">TEAM</h3>
+        
         <div className="image-container flex flex-wrap md:flex-nowrap mt-10 gap-8">
           {teamMembers.map((member) => (
             <div
@@ -295,7 +296,8 @@ const Abouthero = () => {
               className="flex flex-col gap-2 items-center p-0 m-0 cursor-pointer"
               onClick={() => handleMemberClick(member)}
             >
-              <img src={member.imgSrc} alt={member.name} className="w-[100%] rounded-[50%]" />
+            <img src={member.imgSrc} alt={member.name} className="h-[400px] object-cover rounded-none" />
+
               <span className="text-[--white] text-[1.1rem] md:text-[1.3rem] font-[700]">{member.name}</span>
             </div>
           ))}

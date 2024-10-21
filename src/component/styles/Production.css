@@ -1,7 +1,3 @@
-
-
-/* Production.css */
-
 .production-container {
     background-image: url('../../asset/production.png');
     background-position: center;
@@ -12,7 +8,8 @@
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    
+    height: 100svh;
   }
   
   
