@@ -198,10 +198,10 @@ const Header = () => {
     { path: '/news', text: 'News' },
     { path: '/work', text: 'Works' },
     { path: '/carer', text: 'Career' },
-    { path: '/services', text: 'Service' }, // This will have a dropdown
+    { path: '/services', text: 'Service' }, 
   ];
 
-  // Handlers for the Service dropdown menu
+
   const handleServiceClick = (event) => {
     setServiceAnchorEl(event.currentTarget);
   };
@@ -210,21 +210,21 @@ const Header = () => {
     setServiceAnchorEl(null);
   };
 
-  // Function to scroll to specific section on the Services page
+  
   const handleScrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 100, // Adjust offset for fixed header
+        top: element.offsetTop - 100, 
         behavior: 'smooth',
       });
     }
-    setServiceAnchorEl(null); // Close the dropdown after selection
+    setServiceAnchorEl(null); 
   };
 
   return (
-    <section className="header-wrapper overflow-x-hidden p-0 m-0">
-      <div className="header-container p-10 md:p-[70px] md:px-[40px] flex items-center justify-between">
+    <section className="header-wrapper bg-[--black  ] overflow-x-hidden p-0 m-0">
+      <div className="header-container md:p-[20px] md:px-[20px] flex items-center justify-between">
         <motion.img
           variants={{
             hover: {

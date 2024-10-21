@@ -54,74 +54,398 @@ const Client = () => {
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
 
   return (
-    <motion.section
-      style={{ backgroundImage }}
-      className=" place-content-center min-h-screen overflow-hidden  bg-gray-950  text-gray-200"
-    >
-    <div className="client-container px-4">
-       <div className=' p-10 md:p-20'>
-        <h1 className='text-[2.8rem] md:text-[3rem] h-full text-[--white] font-[500] '>WHO WE ARE...</h1>
-        <div className='client-logos bg-[--white] p-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4' >
-       <motion.img src={ClientLogo1} alt="client" className='w-[80%]' whileHover={{ scale: 1.1 }}transition={{ type: "spring", stiffness: 300 }}/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo2} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo3} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo4} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo5} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo6} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo7} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo8} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo9} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo10} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo11} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo12} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo13} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo14} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo15} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo16} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo17} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo18} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo19} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo11} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo12} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo13} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo14} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo15} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo16} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo17} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo18} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo19} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo20} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo21} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo22} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo23} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo24} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo25} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo26} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo27} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo28} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo29} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo30} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo31} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo32} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo33} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo34} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo35} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo36} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo37} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo38} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo39} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo40} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo41} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo42} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo43} alt="client" className='w-[80%]'/>
-        <motion.img whileHover={{ scale:1.1}} transition={{type:"spring", stiffness: 300}} src={ClientLogo44} alt="client" className='w-[80%]'/>
-        </div>
-        </div>
-     </div>
+    // <motion.section
+    //   style={{ backgroundImage }}
+    //   className=" place-content-center min-h-screen overflow-hidden  bg-gray-950  text-gray-200"
+    // >
+    // <div className="client-container px-4">
+    //    <div className=' p-10 md:p-20'>
+    //     <h1 className='text-[2.8rem] md:text-[3rem] h-full text-[--white] font-[500] '>WHY WE ARE...</h1>
+    //     <div className='client-logos bg-[--white] p-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4' >
+    //    <motion.img src={ClientLogo1} alt="client" className='w-[80%]' whileHover={{ scale: 1.3 }}transition={{ type: "spring", stiffness: 300 }}/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo2} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo3} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo4} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo5} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo6} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo7} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo8} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo9} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo10} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo11} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo12} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo13} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo14} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo15} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo16} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo17} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo18} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo19} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo11} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo12} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo13} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo14} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo15} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo16} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo17} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo18} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo19} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo20} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo21} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo22} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo23} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo24} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo25} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo26} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo27} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo28} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo29} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo30} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo31} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo32} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo33} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo34} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo35} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo36} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo37} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo38} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo39} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo40} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo41} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo42} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo43} alt="client" className='w-[80%]'/>
+    //     <motion.img whileHover={{ scale:1.3}} transition={{type:"spring", stiffness: 300}} src={ClientLogo44} alt="client" className='w-[80%]'/>
+    //     </div>
+    //     </div>
+    //  </div>
 
-      {/* Aurora Stars Animation */}
+    //   {/* Aurora Stars Animation */}
       
-     </motion.section>
+    //  </motion.section>
+    <motion.section
+  
+>
+  <div className="client-container px-4 bg-black/60">
+    <div className="p-10 md:p-20">
+      <h1 className="text-[2.8rem] md:text-[3rem] h-full text-white font-[500]">WHY WE ARE...</h1>
+      <div className="client-logos p-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
+        <motion.img
+          src={ClientLogo1}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo2}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo3}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo4}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo5}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo6}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo7}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo8}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo9}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo10}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo11}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo12}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+            <motion.img
+          src={ClientLogo13}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo14}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo15}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo16}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo17}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo18}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo19}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo20}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo21}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo22}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo23}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo24}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo25}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo26}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo27}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo28}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo29}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo30}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo31}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo32}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo33}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo34}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo35}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo36}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo37}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+             <motion.img
+          src={ClientLogo38}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo39}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo40}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo41}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo42}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo43}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.img
+          src={ClientLogo44}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+    
+
+        
+        {/* Add more client logos with the same pattern */}
+      </div>
+    </div>
+  </div>
+</motion.section>
+
   )
 }
 
