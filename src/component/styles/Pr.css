@@ -1,0 +1,8 @@
+.pr-top{
+    background-image: url('../../asset/Pr.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height:120svh;
+    /* background-size: 90%;  */
+    /* background-size: cover; */
+    }

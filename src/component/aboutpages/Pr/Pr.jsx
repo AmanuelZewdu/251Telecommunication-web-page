@@ -63,7 +63,7 @@ const Pr = () => {
     <section className="pr-wrapper bg-[--white] overflow-x-hidden">
       {/* <Mainheader />  */}
      
-  <div className='flex items-center justify-center h-[100svh] w-full mx-auto'>
+  <div className='flex items-center justify-center h-[120svh] w-full mx-auto'>
     <img src={PR1} alt="" />
   </div>
   
