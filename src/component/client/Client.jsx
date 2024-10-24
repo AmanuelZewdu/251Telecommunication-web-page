@@ -46,6 +46,8 @@ import ClientLogo41 from '../../asset/Clients/Clients logo 1-41.png'
 import ClientLogo42 from '../../asset/Clients/Clients logo 1-42.png'
 import ClientLogo43 from '../../asset/Clients/Clients logo 1-43.png'
 import ClientLogo44 from '../../asset/Clients/Clients logo 1-44.png'
+import ClientLogo45 from '../../asset/Clients/EIH Logo.png'
+import ClientLogo46 from '../../asset/Clients/bgi logo 02-0100.png'
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@mui/icons-material';
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
@@ -129,20 +131,20 @@ const Client = () => {
     <div className="p-10 md:p-20">
       <h1 className="text-[2.8rem] md:text-[3rem] h-full text-white font-[500]">WHY WE ARE...</h1>
       <div className="client-logos p-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
-        <motion.img
-          src={ClientLogo1}
-          alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
-          whileHover={{ scale: 1.3 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src={ClientLogo2}
-          alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
-          whileHover={{ scale: 1.3 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
+      <motion.img
+    src={ClientLogo1}
+    alt="client"
+    className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-gray-200 p-2 rounded-md"
+    whileHover={{ scale: 1.3 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  />
+  <motion.img
+    src={ClientLogo2}
+    alt="client"
+    className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-gray-200 p-2 rounded-md"
+    whileHover={{ scale: 1.3 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  />
         <motion.img
           src={ClientLogo3}
           alt="client"
@@ -150,13 +152,21 @@ const Client = () => {
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
-        <motion.img
+        {/* <motion.img
           src={ClientLogo4}
           alt="client"
           className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
-        />
+        /> */}
+        <motion.img
+  src={ClientLogo4}
+  alt="client"
+  className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
+  whileHover={{ scale: 1.3 }}
+  transition={{ type: "spring", stiffness: 300 }}
+/>
+
             <motion.img
           src={ClientLogo5}
           alt="client"
@@ -181,14 +191,14 @@ const Client = () => {
             <motion.img
           src={ClientLogo8}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
             <motion.img
           src={ClientLogo9}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -202,7 +212,7 @@ const Client = () => {
             <motion.img
           src={ClientLogo11}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -237,7 +247,7 @@ const Client = () => {
              <motion.img
           src={ClientLogo16}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -272,7 +282,7 @@ const Client = () => {
              <motion.img
           src={ClientLogo21}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -286,14 +296,14 @@ const Client = () => {
              <motion.img
           src={ClientLogo23}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
              <motion.img
           src={ClientLogo24}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -349,7 +359,7 @@ const Client = () => {
              <motion.img
           src={ClientLogo32}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -384,14 +394,14 @@ const Client = () => {
              <motion.img
           src={ClientLogo37}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
              <motion.img
           src={ClientLogo38}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -405,7 +415,7 @@ const Client = () => {
         <motion.img
           src={ClientLogo40}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -419,7 +429,7 @@ const Client = () => {
         <motion.img
           src={ClientLogo42}
           alt="client"
-          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300 bg-white p-4 rounded-md"
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
@@ -437,11 +447,32 @@ const Client = () => {
           whileHover={{ scale: 1.3 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
+          <motion.img
+          src={ClientLogo45}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+          <motion.img
+          src={ClientLogo46}
+          alt="client"
+          className="w-[80%] filter grayscale hover:filter-none hover:brightness-100 transition-all duration-300"
+          whileHover={{ scale: 1.3 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
     
 
         
         {/* Add more client logos with the same pattern */}
       </div>
+      {/* <h1 className="text-[2.8rem] md:text-[3rem] h-full text-white font-[500]">ALIVE</h1> */}
+      <div className="flex justify-end">
+  <h1 className="text-[2.8rem] md:text-[3rem] h-full text-white font-[500]">
+    ALIVE
+  </h1>
+</div>
+
     </div>
   </div>
 </motion.section>

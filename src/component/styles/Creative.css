@@ -1,0 +1,8 @@
+.creatives-top{
+    background-image: url('../../asset/Creatives.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height:120svh;
+    /* background-size: 90%;  */
+    background-size: cover;
+    }

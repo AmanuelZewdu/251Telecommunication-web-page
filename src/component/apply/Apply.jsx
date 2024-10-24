@@ -78,61 +78,63 @@ const handleFileChange = (event) => {
     return (
      
       
-    <section className='bg-[--white] '>
+      <section className='bg-[--white]'>
       <Mainheader />
-      
-        <div className='container  m-auto bg-white w-[80%] md:w-[50%]'>
-          <h1 className='text-[--black] text-[2rem] p-6 flex justify-center mt-8'>Welcome to Job Apply Form</h1>  
-      <form className='flex flex-col  justify-center align-middle p-20 gap-6' onSubmit={e => handleApply(e, data[0]._id)} >
-     <label htmlFor="firstname">First Name:</label>
-      <input 
-      type="text"
-      id='firstname'
-      ref={userRef}
-      value={firstName}
-      required
-      className='w-[100%] border-[2px] border-[solid] border-black' 
-      onChange={(e) => {setFirstName(e.target.value)}}
-      />
-      <label htmlFor='lastname'>Last Name:</label>
-      <input
-       type="text"
-       id='lastname'
-       onChange={(e) => {setLastName(e.target.value)}}
-       required
-       className='w-[100%] border-[2px] border-[solid] border-black' 
-      />
-
-      <label htmlFor="coverinfo">Cover Letter</label>
-      
-      <input 
-      type="text"
-            id='coverinfo'
-           value={coverLetter}
-            onChange={(e) => {setCoverLetter(e.target.value)}}
+    
+      <div className='container m-auto bg-white w-[80%] md:w-[50%]'>
+        <h1 className='text-[--black] text-[2rem] p-6 flex justify-center mt-8'>
+          Welcome to Job Apply Form
+        </h1>  
+        <form className='flex flex-col justify-center align-middle p-20 gap-6' onSubmit={e => handleApply(e, data[0]._id)}>
+          <label htmlFor="firstname">First Name:</label>
+          <input 
+            type="text"
+            id='firstname'
+            ref={userRef}
+            value={firstName}
             required
             className='w-[100%] border-[2px] border-[solid] border-black' 
+            onChange={(e) => {setFirstName(e.target.value)}}
           />
-
-        <label htmlFor="email">Email:</label>
-         <input 
-          type='email'
-          id='email'
-          value={email}
-          required
-          className='w-[100%] border-[2px] border-[solid] border-black' 
-          onChange={(e) => {setEmail(e.target.value)}}
-         />
     
-       <input type="file" onChange={handleFileChange} required className='mt-4'  />
-        {error && <div className="error">{error}</div>}
- 
-
-
-       <button  className='w-[30%] bg-blue-600 text-white h-[3rem] justify-end mt-4' >Apply</button>
-      </form>
+          <label htmlFor='lastname'>Last Name:</label>
+          <input
+            type="text"
+            id='lastname'
+            value={lastName}
+            required
+            className='w-[100%] border-[2px] border-[solid] border-black' 
+            onChange={(e) => {setLastName(e.target.value)}}
+          />
+    
+          <label htmlFor="coverinfo">Cover Letter</label>
+          <textarea 
+            id='coverinfo'
+            value={coverLetter}
+            onChange={(e) => {setCoverLetter(e.target.value)}}
+            required
+            className='w-[100%] border-[2px] border-[solid] border-black h-32' // Adjust height as needed
+          />
+    
+          <label htmlFor="email">Email:</label>
+          <input 
+            type='email'
+            id='email'
+            value={email}
+            required
+            className='w-[100%] border-[2px] border-[solid] border-black' 
+            onChange={(e) => {setEmail(e.target.value)}}
+          />
+        
+        <label htmlFor="email">CV:</label>
+          <input type="file" onChange={handleFileChange} required  />
+          {error && <div className="error">{error}</div>}
+    
+          <button className='w-[30%] bg-blue-600 text-white h-[3rem] justify-end mt-4'>Apply</button>
+        </form>
       </div>
     </section>
+    
   )
 }
 

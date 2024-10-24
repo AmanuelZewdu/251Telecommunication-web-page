@@ -193,12 +193,14 @@ const Header = () => {
 
   const links = [
     { path: '/', text: 'Home' },
-    { path: '/about', text: 'About' }, 
+    { path: '/about', text: 'About' },
+    { path: '/services', text: 'Services' },
     { path: '/clients', text: 'Clients' },
-    { path: '/news', text: 'News' },
     { path: '/work', text: 'Works' },
+    { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
-    { path: '/services', text: 'Service' }, 
+  
+  
   ];
 
 
@@ -277,7 +279,7 @@ const Header = () => {
                       <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
                       <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                       <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
-                      <MenuItem onClick={() => handleScrollToSection('vas')}>Vas</MenuItem>
+                      <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
                     </Menu>
                   </li>
                 ) : (

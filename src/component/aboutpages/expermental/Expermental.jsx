@@ -69,20 +69,21 @@ const Expermental = () => {
 
 We are a full-fledged communications and public relations firm with offices in the  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area. At 251 Communications, we manage our international and local clients’ communications, marketing, research, logistics, media, PR, branding and production needs. We have partnerships with many of the  leading service research and media agencies inside and outside of Ethiopia.
      </p> */}
-  <p className="text-[--red] text-[1.7rem] font-[400] p-10" style={{
+  <p className="text-[--red] text-[1.7rem] font-[300] p-10" style={{
 
   marginLeft: '1rem',  
   marginRight: '1rem', 
-  textAlign: 'justify' 
+  textAlign: 'justify' ,
+  fontFamily: 'Montserrat, sans-serif' 
 }}>
-  We are a full-fledged communications and public relations firm with offices in the Addis Ababa, Ethiopia and Washington DC, Metropolitan Area. At 251 Communications, we manage our international and local clients’ communications, marketing, research, logistics, media, PR, branding and production needs. We have partnerships with many of the leading service research and media agencies inside and outside of Ethiopia.
+ We are a full-fledged communications and public relations firm with offices in  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area.
 </p>
 
 
 
 
 
-        <h1 className="text-[--red] text-[1.7rem] font-[200] p-10"
+        <h1 className="text-[--red] text-[1.7rem] font-[100] p-10"
         style={{
          
           marginLeft: '1rem',  // Indent the block from the left

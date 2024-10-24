@@ -27,11 +27,13 @@ const Header = () => {
   const links = [
     { path: '/', text: 'Home' },
     { path: '/about', text: 'About' },
+    { path: '/services', text: 'Services' },
     { path: '/clients', text: 'Clients' },
+    { path: '/work', text: 'Works' },
     { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
-    { path: '/work', text: 'Works' },
-    { path: '/services', text: 'Service' },
+  
+  
   ];
 
   // Handlers for the Service dropdown menu
@@ -132,7 +134,7 @@ const Header = () => {
                     <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('vas')}>Vas</MenuItem> {/* New VAS Menu Item */}
+                    <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem> {/* New VAS Menu Item */}
                   </Menu>
                 </li>
               ) : (
