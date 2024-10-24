@@ -74,7 +74,8 @@ We are a full-fledged communications and public relations firm with offices in t
   marginLeft: '1rem',  
   marginRight: '1rem', 
   textAlign: 'justify' ,
-  fontFamily: 'Montserrat, sans-serif' 
+  fontFamily: 'Montserrat, sans-serif' ,
+  color: '#F9AA19',
 }}>
  We are a full-fledged communications and public relations firm with offices in  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area.
 </p>
@@ -88,7 +89,8 @@ We are a full-fledged communications and public relations firm with offices in t
          
           marginLeft: '1rem',  // Indent the block from the left
           marginRight: '1rem', // Indent the block from the right
-          textAlign: 'justify' // Optional: Justifies the text for better alignment
+          textAlign: 'justify' ,
+          color: '#F9AA19',
         }} > Through the line Communications Touch Points Designed a 360 Brand Experiance</h1>
         <div className="flex flex-col items-center gap-10">
           {/* ATL Section */}
