@@ -77,7 +77,7 @@ We are a full-fledged communications and public relations firm with offices in t
   fontFamily: 'Montserrat, sans-serif' ,
   color: '#F9AA19',
 }}>
- We are a full-fledged communications and public relations firm with offices in  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area.
+ We are a full-fledged communications and public relations firm with offices in  Addis Ababa, Ethiopia and Washington DC, Metropolitan Area.At 251 Communications, we manage our international and local clients’ communications, marketing, research, logistics, media, PR, branding and production needs. We have partnerships with many of the  leading service research and media agencies inside and outside of Ethiopia."
 </p>
 
 
