@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import { Menu, MenuItem, Button } from '@mui/material'; 
 import { ArrowDropDown } from '@mui/icons-material'; 
 
-import Logo from '../../asset/logo1.png';
+import Logo from '../../asset/logo_main.png';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 // const Header = () => {
@@ -194,7 +194,7 @@ const Header = () => {
   const links = [
     { path: '/', text: 'Home' },
     { path: '/about', text: 'About' },
-    { path: '/services', text: 'Services' },
+    { path: '/services', text: 'Service' },
     { path: '/clients', text: 'Clients' },
     { path: '/work', text: 'Works' },
     { path: '/news', text: 'News' },
@@ -226,7 +226,7 @@ const Header = () => {
 
   return (
     <section className="header-wrapper bg-[--black  ] overflow-x-hidden p-0 m-0">
-      <div className="header-container md:p-[20px] md:px-[20px] flex items-center justify-between">
+      <div className="header-container md:p-[20px] md:px-[20px] flex items-center justify-between mt-6">
         <motion.img
           variants={{
             hover: {

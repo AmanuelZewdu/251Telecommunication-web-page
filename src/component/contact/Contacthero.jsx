@@ -228,7 +228,7 @@ const Contacthero = () => {
       </div>
 
       <div className='flex flex-col gap-2 p-16'>
-        <p className='text-[--white1]'>Powered by <u>Cloud 251</u></p> 
+        <p className='text-[--white1]'>Powored by <u>Cloud 251</u></p> 
         <h3 className='text-[--white]'>Privacy Policy  ©2024</h3>
       </div>
     </section>
