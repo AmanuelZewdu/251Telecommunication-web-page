@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import NewsImage from '../../asset/news.jpg';
+import NewsImage from '../../asset/dodai.jpeg';
 import CreativeImage from '../../asset/creative-img.png';
 import DigitalImage from '../../asset/digital-img.png';
 
 const boxData = [
   {
     imageSrc: NewsImage,
-    title: 'How to start a business',
+    title: 'Dodai',
     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, nulla quisquam deleniti necessitatibus facere pariatur, nisi modi aut optio quibusdam molestiae sint, sed ipsa! Debitis voluptas ea quisquam dignissimos repudiandae.',
   },
   {
