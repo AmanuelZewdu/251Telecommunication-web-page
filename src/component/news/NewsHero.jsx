@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import NewsImage from '../../asset/dodai.jpeg';
+import DodaiNews from '../../asset/dodai.jpeg';
+import NewsImage from '../../asset/news.jpg';
 import CreativeImage from '../../asset/creative-img.png';
 import DigitalImage from '../../asset/digital-img.png';
 
 const boxData = [
   {
-    imageSrc: NewsImage,
-    title: 'Dodai',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, nulla quisquam deleniti necessitatibus facere pariatur, nisi modi aut optio quibusdam molestiae sint, sed ipsa! Debitis voluptas ea quisquam dignissimos repudiandae.',
+    imageSrc: DodaiNews,
+    title: 'Dodai and EIH',
+    description: 'In an event held on October 21 2024 at the Hyatt Regency, Dodai, Ethiopia s leading electric mobility company, and Ethiopian Investment Holdings (EIH), the strategic investment arm of the Government of Ethiopia, announced a transformative partnership aimed at accelerating the growth of sustainable transportation in the country. ',
   },
   {
     imageSrc: DigitalImage,
@@ -52,37 +53,29 @@ const NewsHero = () => {
           </div>
         </div>
 
-        {/* Sidebar with 4 boxes, hidden on smaller screens */}
-        <div className='hidden md:flex p-[-10px] w-1/3 h-full'>
-          {boxData.map((box, index) => (
-            <div 
-              key={index} 
-              className={`cursor-pointer relative border border-[--black1] p-8 text-center rounded-[1rem] hover:shadow-lg flex-grow flex items-center justify-center ${index > 0 ? '-ml-[0px]' : ''}`}
-              onClick={() => setMainContent(box)}
-              style={{ zIndex: boxData.length - index }} // Ensure the top box overlaps the lower boxes
-            >
-              <p className='absolute top-0 left-0 m-4'>0{index + 1}</p>
-            </div>
-          ))}
-        </div>
+       
+<div className='hidden md:flex w-1/3 h-full'>
+  {boxData.map((box, index) => (
+    <div 
+      key={index} 
+      className={`cursor-pointer relative border border-[--black1] p-8 text-center rounded-[1rem] hover:shadow-lg flex-grow flex items-center justify-center ${index > 0 ? '-ml-[0px]' : ''}`}
+      onClick={() => setMainContent(box)}
+      style={{ zIndex: boxData.length - index }} // Ensures the top box overlaps the lower boxes
+    >
+      <img 
+        src={box.imageSrc} 
+        alt={box.title} 
+        className='absolute inset-0 w-full h-full object-cover rounded-[1rem]' // Updated styles for full coverage
+      />
+      <p className='absolute top-0 left-0 m-4 text-white font-semibold bg-black bg-opacity-50 p-2 rounded'>0{index + 1}</p>
+    </div>
+  ))}
+</div>
+
       </div>
 
       {/* Vertical list of news items for mobile view */}
-      <div className='md:hidden mt-4 overflow-auto'>
-        <div className="flex flex-col">
-          {boxData.map((box, index) => (
-            <div 
-              key={index} 
-              className="cursor-pointer border border-[--black1] p-4 mb-4 rounded-md hover:shadow-lg"
-              onClick={() => setMainContent(box)}
-            >
-              <img src={box.imageSrc} alt={box.title} className='w-full h-32 object-cover mb-2 rounded-md' />
-              <h3 className='text-lg font-semibold'>{box.title}</h3>
-              <p className='text-gray-600'>{box.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+     
     </section>
   )
 }
