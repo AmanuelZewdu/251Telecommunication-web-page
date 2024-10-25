@@ -9,9 +9,9 @@ const Homehero = () => {
    <section className='hero-wrapper '>
     <div className="hero-container flex  relative  justify-center  md:p-20 p-10 md:mb-20 mb-5 overflow-hidden">
       
-      <div className=' w-[100%]  md:mr-0'>
-      <img src={Herotext} alt='text' className='  h-[75%] z-10 w-[15%] md:mr-[-35%] absolute'  />
-      </div>
+    <div className=' w-[100%]  md:mr-0'>
+  <img src={Herotext} alt='text' className='h-[60%] z-10 w-[15%] md:mr-[-35%] absolute object-fit: contain;'  />
+</div>
             
         
       {/* <motion.img  className='md:w-[70%]  h-[150%] w-[100%]'   initial={{x: "7rem", opacity: 0}}

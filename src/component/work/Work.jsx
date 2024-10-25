@@ -310,6 +310,16 @@ import Huawei from "../../asset/Huwa_251WebPage-03.png";
 import Emirates from "../../asset/Huwa_251WebPage-04.png";
 import HollandImage from "../../asset/Holland.jpg";
 
+import CocaColaLogo from "../../asset/Clients/Clients logo 1-02.png"
+import RaxioLogo from "../../asset/Clients/Clients logo 1-16.png"
+import HuaweiLogo from "../../asset/Clients/Clients logo 1-11.png"
+import EmiratesLogo from "../../asset/Clients/Clients logo 1-13.png"
+import VisaLogo from "../../asset/Clients/Clients logo 1-05.png"
+import MasterCardLogo from "../../asset/Clients/master_card_logo.png"
+import HollandLogo from "../../asset/Clients/holland_logo.png"
+
+
+
 const Work = () => {
   const [expandedIndex, setExpandedIndex] = useState(null); // Track the expanded card
 
@@ -319,42 +329,50 @@ const Work = () => {
       description: "Holland Dairy is a top provider of premium dairy products in ethiopia.",
       image: HollandImage,
       backgroundColor: "#FFFFFF",
+      logo:HollandLogo
+   
     },
     {
       title: "Coca-Cola",
       description: "Africas largest cocal-coal bottling partner.",
       image: CocaImage,
       backgroundColor: "#FFFFFF",
+      logo: CocaColaLogo
     },
     {
       title: "Raxio",
       description: "Africa's Leading Carrier Neutral Data Center",
       image: Raxio,
       backgroundColor: "#FFFFFF",
+      logo:RaxioLogo
     },
     {
       title: "Master Card",
       description: "Master Card Powers an inclusive digital economy by making transaction safe, simple and accesible for all.",
       image: MasterCard,
       backgroundColor: "#FFFFFF",
+      logo:MasterCardLogo
     },
     {
       title: "Huawei",
       description: "Huawei is a global leader in ICT and smart device",
       image: Huawei,
       backgroundColor: "#FFFFFF",
+      logo:HuaweiLogo
     },
     {
       title: "Emirates",
       description: "Known for innovation and lexury, it operats a modern fleet, including the Airbus A380 and Boeing 777. ",
       image: Emirates,
       backgroundColor: "#FFFFFF",
+      logo:EmiratesLogo
     },
     {
       title: "VISA",
       description: "Trusted global network and leader in digital payments.",
       image: Visa,
       backgroundColor: "#FFFFFF",
+      logo:VisaLogo
     },
   ];
 
@@ -367,7 +385,7 @@ const Work = () => {
       <Mainheader />
       
       <div className="work-container px-2 md:px-20 flex flex-col items-center">
-        <h1 className="text-[4rem] text-[--blue] font-bold mb-10">OUR WORKS</h1>
+      <h1 className="text-[3rem] text-[--blue] font-bold mb-10">OUR WORKS</h1>
 
         {workItems.map((item, index) => (
           <div
@@ -378,7 +396,7 @@ const Work = () => {
             <div className="flex items-center justify-between">
               {/* Left Image */}
               <img
-                src={item.image}
+                src={item.logo}
                 alt={item.title}
                 className="w-[100px] h-[100px] object-contain"
               />

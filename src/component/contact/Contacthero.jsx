@@ -110,6 +110,12 @@ const Contacthero = () => {
     <section className="contact-wrapper overflow-x-hidden">
       <Header />
 
+
+
+
+
+
+      <div className="contact-container flex flex-col lg:flex-row items-center p-2 sm:p-10 py-20 justify-center">
       <div
   className="social-media-links"
   style={{
@@ -121,7 +127,7 @@ const Contacthero = () => {
     borderRadius: '8px', // Optional: for rounded corners
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', // Optional: shadow effect
     zIndex: 1000, // Ensure it's on top of other elements
-    marginTop: '70px'
+    marginTop: '110px'
   }}
 >
   <a
@@ -190,11 +196,6 @@ const Contacthero = () => {
     <FontAwesomeIcon icon={faTiktok} />
   </a>
 </div>
-
-
-
-
-      <div className="contact-container flex flex-col lg:flex-row items-center p-2 sm:p-10 py-20 justify-center">
         <div className="contact-left flex flex-col p-4 md:p-10 gap-4" style={{ paddingLeft: '2rem' }}>
           <div className="contact-left-top flex items-center justify-center gap-12 px-6 align-middle">
             <h1 className='md:text-[5.5rem] sm:text-[4.5rem] text-[3rem] leading-[4rem] text-[--white] font-[1000] md:leading-[4.2rem]'
@@ -228,7 +229,7 @@ const Contacthero = () => {
       </div>
 
       <div className='flex flex-col gap-2 p-16'>
-        <p className='text-[--white1]'>Powored by <u>Cloud 251</u></p> 
+        <p className='text-[--white1]'>Powered by <u>Cloud 251</u></p> 
         <h3 className='text-[--white]'>Privacy Policy  ©2024</h3>
       </div>
     </section>
