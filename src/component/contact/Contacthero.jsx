@@ -212,8 +212,10 @@ const Contacthero = () => {
         className='text-[--white] font-[bold] w-full text-[.5rem] sm:text-[.8rem] sm:w-[70%] pl-14'
         style={{ fontFamily: 'Montserrat, sans-serif' }} // Applying Montserrat font
       >
-        WE SEEK PASSIONATE COLLABORO-CLIENTS DEDICATED TO THEIR PRODUCTS AND CUSTOMERS. REQUEST A CALL BACK AND TALENTED
-        INDIVIDUALS STRIVING FOR EXCELLENCE. CONTACT US FOR BUSINESS, PRESS, AND LET'S CREATE REMARKABLE WORK TOGETHER.
+        Aster plaza 3rd floor, Meskel flower Bole. <br />
++251116630182 <br />
+Info@251communications.com<br />
+Addis Ababa, Ethiopia <br />
       </p>
         </div>
 

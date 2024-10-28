@@ -63,7 +63,7 @@ const Abouthero = () => {
       className="text-[2.5rem] md:text-[3rem] text-[--white] font-[100]" 
       style={{ fontFamily: 'Montserrat, sans-serif' }}
     >
-      THE TEAM IS OUR GREATEST ASSET
+      OUR TEAM, OUR GREATEST ASSET
     </h1>
   </div>
 )}

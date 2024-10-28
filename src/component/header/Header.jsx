@@ -196,7 +196,7 @@ const Header = () => {
     { path: '/about', text: 'About' },
     { path: '/services', text: 'Service' },
     { path: '/clients', text: 'Clients' },
-    { path: '/work', text: 'Works' },
+    { path: '/work', text: 'Our Work' },
     { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
   
@@ -346,7 +346,8 @@ const Header = () => {
         </div>
 
         <Link to='/contact' className="hidden md:flex">
-          <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+        <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+
         </Link>
 
         <button className="absolute right-2 z-50 flex md:hidden" onClick={() => setMenuOpen(!menuOpen)}>

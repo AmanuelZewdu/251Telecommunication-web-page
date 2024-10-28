@@ -7,20 +7,11 @@ import Herovideo from '../../asset/hero-video.mp4';
 const Homehero = () => {
   return (
    <section className='hero-wrapper '>
-    <div className="hero-container flex  relative  justify-center  md:p-20 p-10 md:mb-20 mb-5 overflow-hidden">
+    <div className=" w-full h-full hero-container flex relative justify-center md:px-20 px-10 md:mb-20 mb-5 overflow-hidden">
       
-    <div className=' w-[100%]  md:mr-0'>
-  <img src={Herotext} alt='text' className='h-[60%] z-10 w-[15%] md:mr-[-35%] absolute object-fit: contain;'  />
-</div>
-            
-        
-      {/* <motion.img  className='md:w-[70%]  h-[150%] w-[100%]'   initial={{x: "7rem", opacity: 0}}
-    animate={{x: 0, opacity: 1}}
-    transition={{
-        duration: 4,
-        type: "spring"  }} src={Heroimg} alt="hero"  /> */}
+
               <motion.video
-          className='md:w-[70%] h-[150%] w-[100%]'
+          className=''
           initial={{ x: "7rem", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
@@ -35,7 +26,7 @@ const Homehero = () => {
         />
         
         <div className='mt-[25%] z-10 w-[100%]'>
-        <img src={Herotext1} alt='text' className='w-[25%]   absolute ml-[-10%]'  />
+        <img src={Herotext1} alt='text' className='w-[15%]   absolute ml-[-10%]'  />
         </div>
     </div>
    </section>

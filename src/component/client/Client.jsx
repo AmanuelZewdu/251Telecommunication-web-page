@@ -46,8 +46,8 @@ import ClientLogo41 from '../../asset/Clients/Clients logo 1-41.png'
 import ClientLogo42 from '../../asset/Clients/Clients logo 1-42.png'
 import ClientLogo43 from '../../asset/Clients/Clients logo 1-43.png'
 import ClientLogo44 from '../../asset/Clients/Clients logo 1-44.png'
-import ClientLogo45 from '../../asset/Clients/EIH Logo.png'
-import ClientLogo46 from '../../asset/Clients/bgi logo 02-0100.png'
+import ClientLogo45 from '../../asset/EIH.png'
+import ClientLogo46 from '../../asset/BGI.png'
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@mui/icons-material';
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];

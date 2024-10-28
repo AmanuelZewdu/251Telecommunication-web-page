@@ -309,6 +309,7 @@ import upImage  from "../../asset/251_UpIcon.png"
 import Huawei from "../../asset/Huwa_251WebPage-03.png";
 import Emirates from "../../asset/Huwa_251WebPage-04.png";
 import HollandImage from "../../asset/Holland.jpg";
+import Dashen from "../../asset/Dashen.jpg";
 
 import CocaColaLogo from "../../asset/Clients/Clients logo 1-02.png"
 import RaxioLogo from "../../asset/Clients/Clients logo 1-16.png"
@@ -317,6 +318,7 @@ import EmiratesLogo from "../../asset/Clients/Clients logo 1-13.png"
 import VisaLogo from "../../asset/Clients/Clients logo 1-05.png"
 import MasterCardLogo from "../../asset/Clients/master_card_logo.png"
 import HollandLogo from "../../asset/Clients/holland_logo.png"
+import DashenLogo from "../../asset/Clients/Clients logo 1-24.png"
 
 
 
@@ -325,14 +327,6 @@ const Work = () => {
 
   const workItems = [
     {
-      title: "Holland Dairy",
-      description: "Holland Dairy is a top provider of premium dairy products in ethiopia.",
-      image: HollandImage,
-      backgroundColor: "#FFFFFF",
-      logo:HollandLogo
-   
-    },
-    {
       title: "Coca-Cola",
       description: "Africas largest cocal-coal bottling partner.",
       image: CocaImage,
@@ -340,11 +334,11 @@ const Work = () => {
       logo: CocaColaLogo
     },
     {
-      title: "Raxio",
-      description: "Africa's Leading Carrier Neutral Data Center",
-      image: Raxio,
+      title: "VISA",
+      description: "Trusted global network and leader in digital payments.",
+      image: Visa,
       backgroundColor: "#FFFFFF",
-      logo:RaxioLogo
+      logo:VisaLogo
     },
     {
       title: "Master Card",
@@ -354,13 +348,6 @@ const Work = () => {
       logo:MasterCardLogo
     },
     {
-      title: "Huawei",
-      description: "Huawei is a global leader in ICT and smart device",
-      image: Huawei,
-      backgroundColor: "#FFFFFF",
-      logo:HuaweiLogo
-    },
-    {
       title: "Emirates",
       description: "Known for innovation and lexury, it operats a modern fleet, including the Airbus A380 and Boeing 777. ",
       image: Emirates,
@@ -368,12 +355,39 @@ const Work = () => {
       logo:EmiratesLogo
     },
     {
-      title: "VISA",
-      description: "Trusted global network and leader in digital payments.",
-      image: Visa,
+      title: "Huawei",
+      description: "Huawei is a global leader in ICT and smart device",
+      image: Huawei,
       backgroundColor: "#FFFFFF",
-      logo:VisaLogo
+      logo:HuaweiLogo
     },
+    {
+      title: "Holland Dairy",
+      description: "Holland Dairy is a top provider of premium dairy products in ethiopia.",
+      image: HollandImage,
+      backgroundColor: "#FFFFFF",
+      logo:HollandLogo
+   
+    },
+  
+    {
+      title: "Raxio",
+      description: "Africa's Leading Carrier Neutral Data Center",
+      image: Raxio,
+      backgroundColor: "#FFFFFF",
+      logo:RaxioLogo
+    },
+    {
+      title: "Dashen",
+      description: "Dashen Bank was established as per the intent of the new policy and the ethiopian investment code.",
+      image: Dashen,
+      backgroundColor: "#FFFFFF",
+      logo:DashenLogo
+    },
+ 
+    
+   
+   
   ];
 
   const toggleExpand = (index) => {
@@ -385,7 +399,6 @@ const Work = () => {
       <Mainheader />
       
       <div className="work-container px-2 md:px-20 flex flex-col items-center">
-      <h1 className="text-[3rem] text-[--blue] font-bold mb-10">OUR WORKS</h1>
 
         {workItems.map((item, index) => (
           <div

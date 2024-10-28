@@ -258,8 +258,8 @@ const Expermental = () => {
   const [offsetXBTL, setOffsetXBTL] = useState(0);
 
   useEffect(() => {
-    const scrollSpeedATL = 0.1; // Speed for ATL
-    const scrollSpeedBTL = 0.1; // Speed for BTL
+    const scrollSpeedATL = 0.05; // Speed for ATL
+    const scrollSpeedBTL = 0.05; // Speed for BTL
 
     const animateScrollATL = () => {
       setOffsetXATL((prevOffsetX) => (prevOffsetX <= -100 ? 0 : prevOffsetX - scrollSpeedATL));
@@ -330,9 +330,9 @@ const Expermental = () => {
               { src: Tv, alt: "tv", label: "Tv" },
               { src: Radio, alt: "radio", label: "Radio" },
               { src: Print, alt: "print", label: "Print" },
-              { src: Ooh, alt: "ooh", label: "Ooh" },
+              { src: Ooh, alt: "ooh", label: "Out of Home" },
               { src: Digitalads, alt: "digital ads", label: "Digital Ads" },
-              { src: Events, alt: "events", label: "Events" },
+             
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -361,6 +361,7 @@ const Expermental = () => {
               { src: B2Bsales, alt: "b2b sales", label: "B2B Sales" },
               { src: GiveAways, alt: "giveaways", label: "Give Aways" },
               { src: SamlingCampaign, alt: "sampling campaign", label: "Sampling Campaign" },
+              { src: Events, alt: "events", label: "Events" },
             ].map((item, index) => (
               <motion.div
                 key={index}

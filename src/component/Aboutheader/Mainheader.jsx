@@ -29,7 +29,7 @@ const Header = () => {
     { path: '/about', text: 'About' },
     { path: '/services', text: 'Service' },
     { path: '/clients', text: 'Clients' },
-    { path: '/work', text: 'Works' },
+    { path: '/work', text: 'Our Work' },
     { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
   
@@ -58,8 +58,8 @@ const Header = () => {
   };
 
   return (
-    <section className="header-wrapper bg-[--white] overflow-x-hidden p-0 m-0">
-      <div className="header-container md:p-[20px] md:px-[20px] flex items-center justify-between">
+    <section className="header-wrapper"style={{ backgroundColor: '#fff6f9', overflowX: 'hidden', padding: 0, margin: 0 }}>
+      <div className="header-container  md:px-[20px] flex items-center justify-between">
         <motion.img
           variants={{
             hover: {
