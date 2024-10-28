@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../header/Header'
 import '../../styles/Production.css'
 import Aboutheader from '../../Aboutheader/Aboutheader'
+import OverlayImage from '../../../asset/PlayIcon-01.png'
 
 
 
@@ -10,17 +11,20 @@ const Production = () => {
   
       <section className="production-container p-10 m-0">
   <div className="production-content-wrapper flex flex-col items-center">
-    {/* Text Content */}
-    {/* <div className="production-text text-center py-4">
-      <p>
-        Our production services are expertly tailored to bring your most ambitious creative ideas to life with precision and a high level of professionalism. Whether it’s captivating audiovisual content, event management, or powerful campaign execution, our team combines innovation and expertise to meet your production needs and deliver results that surpass expectations.
-      </p>
-    </div> */}
-
-    {/* Image */}
-    {/* <div className="production-image">
-      <img src="/" alt="Production" />
-    </div> */}
+  {/* <img
+          src={OverlayImage}
+          alt="Overlay"
+          className="overlay-image"
+          style={{
+            position: 'absolute', // Positioning for overlay effect
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)', // Center the image
+            zIndex: 1, // Ensure the image is above other content
+            width: '80%', // Adjust size as needed
+            height: 'auto', // Maintain aspect ratio
+          }}
+        /> */}
   </div>
 </section>
   );

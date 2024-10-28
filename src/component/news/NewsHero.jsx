@@ -11,19 +11,19 @@ const boxData = [
     description: 'In an event held on October 21 2024 at the Hyatt Regency, Dodai, Ethiopia s leading electric mobility company, and Ethiopian Investment Holdings (EIH), the strategic investment arm of the Government of Ethiopia, announced a transformative partnership aimed at accelerating the growth of sustainable transportation in the country. ',
   },
   {
-    imageSrc: DigitalImage,
-    title: 'Partnership tips',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, nulla quisquam deleniti necessitatibus facere pariatur, nisi modi aut optio quibusdam molestiae sint, sed ipsa! Debitis voluptas ea quisquam dignissimos repudiandae.',
+    imageSrc: "",
+    title: '',
+    description: '',
   },
   {
-    imageSrc: CreativeImage,
-    title: 'Manage your business',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, nulla quisquam deleniti necessitatibus facere pariatur, nisi modi aut optio quibusdam molestiae sint, sed ipsa! Debitis voluptas ea quisquam dignissimos repudiandae.',
+    imageSrc: "",
+    title: '',
+    description: '',
   },
   {
-    imageSrc: NewsImage,
-    title: 'Stay successful',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, nulla quisquam deleniti necessitatibus facere pariatur, nisi modi aut optio quibusdam molestiae sint, sed ipsa! Debitis voluptas ea quisquam dignissimos repudiandae.',
+    imageSrc: "",
+    title: '',
+    description: '',
   },
 ];
 
