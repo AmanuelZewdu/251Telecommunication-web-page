@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FcMenu } from "react-icons/fc";
 import { IoMdClose } from "react-icons/io";
-import { Menu, MenuItem, Button } from '@mui/material'; // Material-UI imports
-import { ArrowDropDown } from '@mui/icons-material'; // Arrow icon import
-
+import { Menu, MenuItem, Button } from '@mui/material';
+import { ArrowDropDown } from '@mui/icons-material';
 import Logo from '../../asset/logo.png';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [clientWidth, setClientWidth] = useState(
     typeof document !== 'undefined' ? document.documentElement.clientWidth : 0
   );
-  const [serviceAnchorEl, setServiceAnchorEl] = useState(null); // State for the "Service" dropdown menu
+  const [serviceAnchorEl, setServiceAnchorEl] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setClientWidth(document.documentElement.clientWidth);
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -26,17 +26,12 @@ const Header = () => {
 
   const links = [
     { path: '/', text: 'Home' },
-    { path: '/about', text: 'About' },
     { path: '/services', text: 'Service' },
-    { path: '/clients', text: 'Clients' },
     { path: '/work', text: 'Our Work' },
     { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
-  
-  
   ];
 
-  // Handlers for the Service dropdown menu
   const handleServiceClick = (event) => {
     setServiceAnchorEl(event.currentTarget);
   };
@@ -45,21 +40,22 @@ const Header = () => {
     setServiceAnchorEl(null);
   };
 
-  // Function to scroll to a specific section on the Services page
   const handleScrollToSection = (id) => {
+
+    navigate('/services');
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 100, // Adjust scroll offset for fixed header
+        top: element.offsetTop - 100,
         behavior: 'smooth',
       });
     }
-    setServiceAnchorEl(null); // Close the dropdown after selection
+    handleServiceClose(); // Close dropdown after selection
   };
 
   return (
-    <section className="header-wrapper"style={{ backgroundColor: '#fff6f9', overflowX: 'hidden', padding: 0, margin: 0 }}>
-      <div className="header-container  md:px-[20px] flex items-center justify-between">
+    <section className="header-wrapper" style={{ backgroundColor: '#fff6f9', overflowX: 'hidden', padding: 0, margin: 0 }}>
+      <div className="header-container md:px-[20px] flex items-center justify-between">
         <motion.img
           variants={{
             hover: {
@@ -107,19 +103,19 @@ const Header = () => {
           <ul className="flex text-[.8rem] gap-6 items-center text-[--black]">
             {links.map((link) =>
               link.text === 'Service' ? (
-                <li key={link.path} className="relative">
-                  <Link to="/services" className={`${location.pathname === '/services' ? 'text-[--yellow]' : ''}`}>
+                <li
+                  key={link.path}
+                  className="relative"
+                  onMouseEnter={handleServiceClick}
+                  onMouseLeave={handleServiceClose}
+                >
+                  <Link
+                    to="/services"
+                    className={`${location.pathname === '/services' ? 'text-[--yellow]' : ''}`}
+                  >
                     Service
                   </Link>
-                  <Button
-                    aria-controls="service-menu"
-                    aria-haspopup="true"
-                    onClick={handleServiceClick}
-                    className="min-w-0 p-0 m-0"
-                    style={{ color: location.pathname === '/services' ? 'var(--yellow)' : 'inherit' }}
-                  >
-                    <ArrowDropDown />
-                  </Button>
+              
 
                   {/* Dropdown Menu */}
                   <Menu
@@ -127,6 +123,7 @@ const Header = () => {
                     anchorEl={serviceAnchorEl}
                     open={Boolean(serviceAnchorEl)}
                     onClose={handleServiceClose}
+                    onMouseLeave={handleServiceClose} // Ensure dropdown closes when mouse leaves
                   >
                     <MenuItem onClick={() => handleScrollToSection('experential')}>Experiential</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('creative')}>Creative</MenuItem>
@@ -134,7 +131,7 @@ const Header = () => {
                     <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem> {/* New VAS Menu Item */}
+                    <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
                   </Menu>
                 </li>
               ) : (
@@ -164,4 +161,3 @@ const Header = () => {
 };
 
 export default Header;
-
