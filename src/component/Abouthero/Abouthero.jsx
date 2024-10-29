@@ -29,7 +29,7 @@ const Abouthero = () => {
      },
         { id: 6, name: 'Michael Mekonne', imgSrc: Michael, role: '', description: 'Michael Mekonne manages client relationships and ensures the successful execution of communication strategies at 251 Communications. With experience spanning technology, healthcare, and entertainment, he plays a pivotal role in driving business growth and maintaining client satisfaction.'
      },
-     { id: 7, name: 'Biniyam Lemma ', imgSrc: Biniam, role: '', description: 'As Experiential expert, specializes in Below the Line (BTL) marketing, delivering memorable brand experiences. His expertise in leading teams and executing high-impact projects ensures that every activation leaves a lasting impression on both clients and audiences.'
+     { id: 7, name: 'Binyam Lemma ', imgSrc: Biniam, role: '', description: 'As Experiential expert, specializes in Below the Line (BTL) marketing, delivering memorable brand experiences. His expertise in leading teams and executing high-impact projects ensures that every activation leaves a lasting impression on both clients and audiences.'
     
      },
      
