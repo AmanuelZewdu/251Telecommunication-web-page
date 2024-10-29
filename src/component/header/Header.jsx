@@ -36,7 +36,7 @@ const Header = () => {
 
     { path: '/work', text: 'Our Work' },
     { path: '/news', text: 'News' },
-    { path: '/carer', text: 'Career***' },
+    { path: '/carer', text: 'Career' },
   
   
   ];
