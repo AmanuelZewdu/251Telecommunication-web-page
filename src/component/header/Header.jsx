@@ -189,7 +189,7 @@ const Header = () => {
                     <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                     <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('vas')}>Vas</MenuItem>
+                    <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
                   </Menu>
                 </li>
               ) : (

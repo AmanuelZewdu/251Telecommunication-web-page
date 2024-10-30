@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import Logo from '../../asset/logo_main.png';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // Importing icons
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram,FaTiktok } from 'react-icons/fa'; // Importing icons
 
 const links = [
   { path: '/', text: 'Home' },
@@ -28,6 +28,7 @@ const socialLinks = [
   { href: 'https://x.com/251Comms?t=9RKQBGw9DXV_D9sho9UbjQ&s=09', icon: <FaTwitter />, label: 'Twitter' },
   { href: 'https://www.linkedin.com/company/251-communications-&-marketing-plc/', icon: <FaLinkedinIn />, label: 'LinkedIn' },
   { href: 'https://www.instagram.com/251comms?igsh=MTN4aGlyNTRhZTQ4NA==', icon: <FaInstagram />, label: 'Instagram' },
+  { href: 'https://www.tiktok.com/@251comms?_t=8kgy96HUmF3&_r=1', icon: <FaTiktok />, label: 'TikTok' },
 ];
 
 const Footer = () => {
