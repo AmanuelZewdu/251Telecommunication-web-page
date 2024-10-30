@@ -70,14 +70,13 @@ const Header = () => {
 
     
     style={{
-                        // Center within the parent
+       position :'absolute',                // Center within the parent
       top: '15%',                               // Vertical center
       left: '50%',                              // Horizontal center
       transform: 'translate(-50%, -50%)',       // Offset to center
       backgroundColor: 'rgba(0, 0, 0, 0.5)',    // Semi-transparent background
       color: '#fff',                            // White text color
       padding: '0.5rem 2rem',                   // Less padding on top/bottom, more on sides
-      boxShadow: '0px 8px 24px 8px rgba(255, 223, 0, 0.5)', // Soft yellow shadow
       zIndex: 10,
       borderRadius: '1.5rem',                   // Rounded corners
       width: '80%',                             // Adjust width as needed

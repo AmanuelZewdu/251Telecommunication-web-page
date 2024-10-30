@@ -50,12 +50,7 @@ const Abouthero = () => {
       <MissionVisionValues />
       <div className="about-container p-[40px] md:px-[80px]">
         <div className="team-container flex flex-col">
-          {/* {!selectedMember && (
-            <div className=" justify-center">
-              <h1 className="text-[2.5rem] md:text-[3rem] text-[--white] font-[100]"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}>THE TEAM IS OUR GREATEST ASSET</h1>
-            </div>
-          )} */}
+  
 
 {!selectedMember && (
   <div className="flex justify-center items-center text-center">
