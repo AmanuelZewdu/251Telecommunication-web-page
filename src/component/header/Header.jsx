@@ -162,47 +162,45 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex md:flex-row">
-          <ul className="flex text-[.8rem] gap-6 items-center text-[--white1]">
-            {links.map((link) =>
-              link.text === 'Service' ? (
-                <li key={link.path} className="relative"     onMouseEnter={handleServiceClick}
-                onMouseLeave={handleServiceClose}>
-                  <Link
-                    to="/services"
-                   
-                
-                    className={`${location.pathname === '/services' ? 'text-[--yellow]' : ''}`}
-                  >
-                    
-                    Service
-                  </Link>
+        <ul className="flex text-[1rem] gap-6 items-center text-[--white1]"> {/* Increased the base font size */}
+  {links.map((link) =>
+    link.text === 'Service' ? (
+      <li key={link.path} className="relative" onMouseEnter={handleServiceClick} onMouseLeave={handleServiceClose}>
+        <Link
+          to="/services"
+          className={`font-bold text-[0.8rem] hover:cursor-pointer hover:text-[--yellow] ${location.pathname === link.path ? 'text-[--yellow]' : ''}`} 
+        >
+          Service
+        </Link>
 
-                  <Menu
-                    id="service-menu"
-                    anchorEl={serviceAnchorEl}
-                    open={Boolean(serviceAnchorEl)}
-                    onClose={handleServiceClose}
-                  >
-                    <MenuItem onClick={() => handleScrollToSection('experential')}>Experiential</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('creative')}>Creative</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('digital')}>Digital</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
-                    <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
-                  </Menu>
-                </li>
-              ) : (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  className={`hover:cursor-pointer hover:text-[--yellow] ${location.pathname === link.path ? 'text-[--yellow]' : ''}`}
-                >
-                  {link.text}
-                </NavLink>
-              )
-            )}
-          </ul>
+        <Menu
+          id="service-menu"
+          anchorEl={serviceAnchorEl}
+          open={Boolean(serviceAnchorEl)}
+          onClose={handleServiceClose}
+        >
+          <MenuItem onClick={() => handleScrollToSection('experential')}>Experiential</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('creative')}>Creative</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('digital')}>Digital</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('pr')}>PR</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
+          <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
+        </Menu>
+      </li>
+    ) : (
+      <NavLink
+        key={link.path}
+        to={link.path}
+        className={`font-bold text-[0.8rem] hover:cursor-pointer hover:text-[--yellow] ${location.pathname === link.path ? 'text-[--yellow]' : ''}`} // Added font size
+      >
+        {link.text}
+      </NavLink>
+    )
+  )}
+</ul>
+
+
         </div>
 
         <Link to='/contact' className="hidden md:flex  pr-4">
