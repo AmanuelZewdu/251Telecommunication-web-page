@@ -65,8 +65,28 @@ const Header = () => {
   };
 
   return (
-    <section className="header-wrapper bg-[--black  ] overflow-x-hidden p-0 m-0">
-      <div className="header-container md:p-[20px] md:px-[20px] flex items-center justify-between mt-6">
+    <section
+    className="header-wrapper fixed top-0 left-0 w-full z-10 bg-transparent"
+
+    
+    style={{
+                        // Center within the parent
+      top: '15%',                               // Vertical center
+      left: '50%',                              // Horizontal center
+      transform: 'translate(-50%, -50%)',       // Offset to center
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',    // Semi-transparent background
+      color: '#fff',                            // White text color
+      padding: '0.5rem 2rem',                   // Less padding on top/bottom, more on sides
+      boxShadow: '0px 8px 24px 8px rgba(255, 223, 0, 0.5)', // Soft yellow shadow
+      zIndex: 10,
+      borderRadius: '1.5rem',                   // Rounded corners
+      width: '80%',                             // Adjust width as needed
+      height: '6rem',                           // Fixed height for reduced header height
+      textAlign: 'center'                       // Center-align text within the header
+    }}
+  >
+  
+      <div className="header-container md:px-[20px] flex items-center justify-between">
         <motion.img
           variants={{
             hover: {
