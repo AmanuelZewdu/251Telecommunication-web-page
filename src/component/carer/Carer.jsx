@@ -3,26 +3,8 @@ import datas from "../../asset/data/Jobdata.json";
 import { Link } from "react-router-dom";
 import axios from "../../api/axios";
 import { useEffect, useState } from "react";
+import Footer from "../footer/Footer";
 const Carer = ( {data}) => {
-    
-  
-  
-  //  const [data, setData] = useState([])
-    // async function getData() {
-    //     try {
-    //       const response = await axios.get('/jobs');
-    //       setData(response.data); // Log the data to the console
-    //     } catch (error) {
-    //       console.error('Error fetching data:', error); // Handle errors gracefully
-    //     }
-    //   }
-
-    //   useEffect(() => {
-    //     getData()
-    //   })
-      
-    
-
   return (
     <section className="bg-[--white]">
       <Mainheader />
@@ -54,6 +36,7 @@ const Carer = ( {data}) => {
           );
         })}
       </div>
+      <Footer/>
     </section>
   );
 };

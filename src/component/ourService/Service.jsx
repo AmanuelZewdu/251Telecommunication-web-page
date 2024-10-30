@@ -7,6 +7,7 @@ import Research from "../aboutpages/research/Research";
 
 import Experential from "../aboutpages/experential/Experential"
 import Vas from "../aboutpages/Vas/Vas"
+import Footer from "../footer/Footer";
 
 
 
@@ -56,6 +57,7 @@ import Vas from "../aboutpages/Vas/Vas"
             <section id="vas">
             <Vas />
             </section>
+            <Footer/>
         </>
         );
     };
