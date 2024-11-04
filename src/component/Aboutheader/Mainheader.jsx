@@ -28,6 +28,7 @@ const Header = () => {
     { path: '/', text: 'Home' },
     { path: '/services', text: 'Service' },
     { path: '/work', text: 'Our Work' },
+    { path: '/event', text: 'Event' },
     { path: '/news', text: 'News' },
     { path: '/carer', text: 'Career' },
   ];

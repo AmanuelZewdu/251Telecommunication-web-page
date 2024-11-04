@@ -21,6 +21,7 @@ import Services from './component/ourService/Service';
 import Pr from './component/aboutpages/Pr/Pr';
 import ClientPage from './pages/Client/ClientPage';
 import Work from './component/work/Work';
+import Event from "./component/event/Event"
 
 function App() {
   const [data, setData] = useState([])
@@ -60,6 +61,7 @@ function App() {
            <Route path='/carer/apply/:id' element={<Apply data={data} />} />
            <Route path='/about/creative/viewdetail' element={<ViewDetail/>} />
            <Route path='/services' element={<Services/>} />
+           <Route path='/event' element={<Event/>} />
         </Routes>
        </Router>
      

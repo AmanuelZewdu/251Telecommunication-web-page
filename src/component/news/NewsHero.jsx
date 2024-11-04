@@ -48,15 +48,16 @@ const NewsHero = () => {
           {/* Gradient Overlay */}
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent z-[5] rounded-xl"></div>
 
-          {/* Text over the image */}
-          <div className='absolute bottom-0 left-0 w-full flex flex-col items-center text-center p-4 z-10 rounded-xl'>
-            <h2 className='text-[2rem] font-[700] text-white'>
-              {mainContent.title}
-            </h2>
-            <p className='text-[--black1] text-white bg-[rgba(0,0,0,0.6)] p-2 rounded'>
-              {mainContent.description}
-            </p>
-          </div>
+        {/* Text over the image */}
+<div className='absolute bottom-0 left-0 w-full flex flex-col items-start text-left p-4 z-10 rounded-xl'>
+  <h2 className='text-[2rem] font-[700] text-white'>
+    {mainContent.title}
+  </h2>
+  <p className='text-[--black1] text-white bg-[rgba(0,0,0,0.6)] p-2 rounded'>
+    {mainContent.description}
+  </p>
+</div>
+
         </div>
 
         {/* Vertical stack of clickable images with scaling effect */}
