@@ -74,7 +74,7 @@ const Header = () => {
       top: '15%',                               // Vertical center
       left: '50%',                              // Horizontal center
       transform: 'translate(-50%, -50%)',       // Offset to center
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',    // Semi-transparent background
+      backgroundColor: 'rgba(0, 0, 0, 0.1)',   // Semi-transparent background
       color: '#fff',                            // White text color
       padding: '0.5rem 2rem',                   // Less padding on top/bottom, more on sides
       zIndex: 10,
@@ -126,7 +126,7 @@ const Header = () => {
                       />
                           <ArrowDropDown />
                     </div>
-                    <Menu
+                    {/* <Menu
                       id="service-menu"
                       anchorEl={serviceAnchorEl}
                       open={Boolean(serviceAnchorEl)}
@@ -139,7 +139,7 @@ const Header = () => {
                       <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                       <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
                       <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
-                    </Menu>
+                    </Menu> */}
                   </li>
                 ) : (
                   <NavLink
@@ -161,7 +161,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex md:flex-row">
-        <ul className="flex text-[1rem] gap-6 items-center text-[--white1]"> {/* Increased the base font size */}
+        <ul className="flex text-[1rem] gap-6 items-center  text-black"> {/* Increased the base font size */}
   {links.map((link) =>
     link.text === 'Service' ? (
       <li key={link.path} className="relative" onMouseEnter={handleServiceClick} onMouseLeave={handleServiceClose}>
@@ -172,7 +172,7 @@ const Header = () => {
           Service
         </Link>
 
-        <Menu
+        {/* <Menu
           id="service-menu"
           anchorEl={serviceAnchorEl}
           open={Boolean(serviceAnchorEl)}
@@ -185,7 +185,7 @@ const Header = () => {
           <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
           <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
           <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
-        </Menu>
+        </Menu> */}
       </li>
     ) : (
       <NavLink

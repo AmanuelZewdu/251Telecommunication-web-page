@@ -21,8 +21,8 @@ const Abouthero = () => {
      },
         { id: 2, name: 'Fantawork Samuel', imgSrc: Fantish, role: 'CEO', description: 'Fantawork brings a wealth of experience in strategic marketing, brand development, and stakeholder engagement. With a proven track record of managing cross-functional teams and driving successful business outcomes, she is a highly respected leader. As CEO of 251 Communications, her focus is on innovation, growth, and elevating brands within the Ethiopian and international markets.'
      },
-        { id: 3, name: 'John Kimani', imgSrc: Jhon, role: 'Creative Director ', description: 'A seasoned Creative Director with 18 years of experience, John has collaborated with renowned brands like Guinness, Visa, Diageo, and Absa Bank. His award-winning work spans multiple countries, including South Africa, Tanzania, Uganda, India, Dubai, and currently Ethiopia.'
-     },
+    //     { id: 3, name: 'John Kimani', imgSrc: Jhon, role: 'Creative Director ', description: 'A seasoned Creative Director with 18 years of experience, John has collaborated with renowned brands like Guinness, Visa, Diageo, and Absa Bank. His award-winning work spans multiple countries, including South Africa, Tanzania, Uganda, India, Dubai, and currently Ethiopia.'
+    //  },
         { id: 4, name: 'Naod Mulu', imgSrc: Naod, role: 'Art Director ',description: 'He brings a unique blend of creativity and technical expertise, shaping impactful visuals for leading Ethiopian brands. His ability to lead creative campaigns across diverse sectors has positioned him as a key contributor to innovative marketing strategies at 251 Communications.'
     },
         { id: 5, name: 'Bamlak Abebayehu', imgSrc: Bamlak, role: 'Digital Lead ', description: 'A dynamic digital lead with a strong tech background, he has a proven track record in digital transformation and user engagement. Known for wearing many hats and supporting every department, he is a great leader passionate about merging creativity with analytics to drive innovation.'
@@ -104,9 +104,10 @@ const Abouthero = () => {
             e.currentTarget.style.transform = 'scale(1)';
           }}
         />
-        <span className="text-[--white] text-[1.1rem] md:text-[1.3rem] font-[700]">
-          {member.name}
-        </span>
+<span className="text-[--white] text-[1.1rem] md:text-[1.3rem] font-[300]">
+  {member.name.split(" ")[0]} <br /> {member.name.split(" ").slice(1).join(" ")}
+</span>
+
       </div>
     ))}
   </div>

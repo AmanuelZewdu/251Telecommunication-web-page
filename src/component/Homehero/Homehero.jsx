@@ -5,10 +5,8 @@ import { motion } from 'framer-motion';
 import Herovideo from '../../asset/hero-video.mp4';
 import Abouthero from '../Abouthero/Abouthero';
 import Client from '../client/Client';
-import Logo from '../../asset/logo_main.png';
+import Logo from '../../asset/home-text2.png';
 import Footer from '../footer/Footer';
-
-
 
 const Homehero = () => {
   return (
@@ -40,6 +38,19 @@ const Homehero = () => {
           muted
           playsInline
         />
+
+        {/* Image at the bottom right corner */}
+        <img
+          src={Logo} // Replace with your desired image path
+          alt="Overlay Logo"
+          style={{
+            position: 'absolute',
+            right: '20px',
+            bottom: '20px',
+            width: '120px', // Adjust the size as needed
+            opacity: 0.8, // Optional: adjust opacity for styling
+          }}
+        />
       </div>
 
       {/* Render About Hero and Client sections */}
@@ -47,8 +58,7 @@ const Homehero = () => {
       <Client />
 
       {/* Footer */}
-      <Footer/>
-  
+      <Footer />
     </section>
   );
 };

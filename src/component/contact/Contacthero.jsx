@@ -4,8 +4,8 @@ import axios from '../../api/axios';
 import Header from '../header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faFacebook, faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
-
+import { RxCross2 } from 'react-icons/rx';
+import twitter_logo from "../../asset/twitter_logo.png"
 
 
 const Contacthero = () => {
@@ -56,19 +56,7 @@ const Contacthero = () => {
     marginTop: '110px'
   }}
 >
-  <a
-    href="https://x.com/251Comms?t=9RKQBGw9DXV_D9sho9UbjQ&s=09"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: 'block', // Stack the links vertically
-      margin: '5px 0', // Space between icons
-      color: '#000', // Color of the icons
-      textDecoration: 'none', // Remove underline
-    }}
-  >
-    <FontAwesomeIcon icon={faTwitter} />
-  </a>
+
   <a
     href="https://www.linkedin.com/company/251-communications-&-marketing-plc/"
     target="_blank"
@@ -82,6 +70,20 @@ const Contacthero = () => {
   >
     <FontAwesomeIcon icon={faLinkedin} />
   </a>
+  <a
+  href="https://x.com/251Comms?t=9RKQBGw9DXV_D9sho9UbjQ&s=09"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: 'block',
+    margin: '5px 0',
+    color: '#000',
+    textDecoration: 'none',
+  }}
+>
+  <img src={twitter_logo} alt="Twitter" style={{ width: '1em', height: '1em' }} />
+</a>
+
   <a
     href="https://www.facebook.com/share/PvXZUCLbnHdwYJ2i/?mibextid=qi2Omg"
     target="_blank"

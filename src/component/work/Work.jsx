@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import Mainheader from '../Aboutheader/Mainheader';
+import Mainheader from '../Aboutheader/Darkheader';
 import CocaImage from "../../asset/CocaCola 251WebPage.jpg";
 import Raxio from "../../asset/RAXIO 251WebPage.jpg";
 import MasterCard from "../../asset/MasterCard 251WebPage.jpg";
@@ -97,61 +97,61 @@ const Work = () => {
   };
 
   return (
-    <section className="bg-[--white]">
-      <Mainheader />
-      
-      <div className="work-container px-2 md:px-20 flex flex-col items-center">
-
-        {workItems.map((item, index) => (
-          <div
-            key={index}
-            className="w-full mb-5 p-5 rounded-lg shadow-lg"
-            style={{ backgroundColor: item.backgroundColor }}
-          >
-            <div className="flex items-center justify-between">
-              {/* Left Image */}
-              <img
-                src={item.logo}
-                alt={item.title}
-                className="w-[100px] h-[100px] object-contain"
-              />
-              
-              {/* Center Content */}
-              <div className="flex-1 ml-5">
-                <h2 className="text-[1.5rem] font-bold">{item.title}</h2>
-                <p className="text-[1rem] text-gray-600">{item.description}</p>
-              </div>
-
-              {/* Right Arrow Button */}
-              <button 
-                className="w-[50px] h-[50px] flex items-center justify-center bg-transparent"
-                style={{
-                  backgroundImage: `url(${expandedIndex === index ? upImage : downImage})`,
-                  backgroundSize: 'contain',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-                onClick={() => toggleExpand(index)}
-              >
-                {/* Arrow Button toggles between up and down based on expanded state */}
-              </button>
+    <section className="bg-gray-600">
+    <Mainheader />
+    
+    <div className="work-container px-2 md:px-20 flex flex-col items-center">
+      {workItems.map((item, index) => (
+        <div
+          key={index}
+          className="w-full mb-5 p-5 rounded-lg shadow-lg"
+          style={{ backgroundColor: item.backgroundColor }}
+        >
+          <div className="flex items-center justify-between">
+            {/* Left Image */}
+            <img
+              src={item.logo}
+              alt={item.title}
+              className="w-[100px] h-[100px] object-contain"
+            />
+            
+            {/* Center Content */}
+            <div className="flex-1 ml-5">
+              <h2 className="text-[1.5rem] font-bold">{item.title}</h2>
+              <p className="text-[1rem] text-gray-600">{item.description}</p>
             </div>
-
-            {/* Expanded content: full-width image under the card */}
-            {expandedIndex === index && (
-              <div className="mt-4">
-                <img
-                  src={item.image}
-                  alt={`${item.title} expanded`}
-                  className="w-full h-auto max-w-[1100px] object-contain mx-auto"
-                />
-              </div>
-            )}
+  
+            {/* Right Arrow Button */}
+            <button 
+              className="w-[50px] h-[50px] flex items-center justify-center bg-transparent"
+              style={{
+                backgroundImage: `url(${expandedIndex === index ? upImage : downImage})`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+              onClick={() => toggleExpand(index)}
+            >
+              {/* Arrow Button toggles between up and down based on expanded state */}
+            </button>
           </div>
-        ))}
-      </div>
-      <Footer/>
-    </section>
+  
+          {/* Expanded content: full-width image under the card */}
+          {expandedIndex === index && (
+            <div className="mt-4">
+              <img
+                src={item.image}
+                alt={`${item.title} expanded`}
+                className="w-full h-auto max-w-[1100px] object-contain mx-auto"
+              />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+    <Footer/>
+  </section>
+  
   );
 };
 

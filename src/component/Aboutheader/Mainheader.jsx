@@ -40,18 +40,27 @@ const Header = () => {
     setServiceAnchorEl(null);
   };
 
-  const handleScrollToSection = (id) => {
+  const [targetSectionId, setTargetSectionId] = useState(null);
 
-    navigate('/services');
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100,
-        behavior: 'smooth',
-      });
-    }
-    handleServiceClose(); // Close dropdown after selection
+  const handleScrollToSection = (id) => {
+    setTargetSectionId(id); // Store the target section ID
+    navigate('/services');   // Navigate to the services page
+    handleServiceClose();    // Close dropdown after selection
   };
+  
+  useEffect(() => {
+    if (location.pathname === '/services' && targetSectionId) {
+      const element = document.getElementById(targetSectionId);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 100,
+          behavior: 'smooth',
+        });
+      }
+      setTargetSectionId(null); // Reset after scrolling
+    }
+  }, [location, targetSectionId]);
+  
 
   return (
     <section className="header-wrapper" style={{ backgroundColor: '#fff6f9', overflowX: 'hidden', padding: 0, margin: 0 }}>

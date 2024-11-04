@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import Logo from '../../asset/logo_main.png';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram,FaTiktok } from 'react-icons/fa'; // Importing icons
+import twitter_logo from "../../asset/twitter_logo.png"
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { RxCross2 } from 'react-icons/rx';
+
+
 
 const links = [
   { path: '/', text: 'Home' },
@@ -25,7 +29,11 @@ const serviceLinks = [
 
 const socialLinks = [
   { href: 'https://www.facebook.com/share/PvXZUCLbnHdwYJ2i/?mibextid=qi2Omg', icon: <FaFacebookF />, label: 'Facebook' },
-  { href: 'https://x.com/251Comms?t=9RKQBGw9DXV_D9sho9UbjQ&s=09', icon: <FaTwitter />, label: 'Twitter' },
+  { 
+    href: 'https://x.com/251Comms?t=9RKQBGw9DXV_D9sho9UbjQ&s=09', 
+    icon: <img src={twitter_logo} alt="Twitter" style={{ width: '1em', height: '1em' }} />, 
+    label: 'Twitter' 
+  },
   { href: 'https://www.linkedin.com/company/251-communications-&-marketing-plc/', icon: <FaLinkedinIn />, label: 'LinkedIn' },
   { href: 'https://www.instagram.com/251comms?igsh=MTN4aGlyNTRhZTQ4NA==', icon: <FaInstagram />, label: 'Instagram' },
   { href: 'https://www.tiktok.com/@251comms?_t=8kgy96HUmF3&_r=1', icon: <FaTiktok />, label: 'TikTok' },
@@ -35,13 +43,13 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: '#1b1b2f',
-        color: '#eee',
+        backgroundColor: '#fff',
+        color: '#000',
         padding: '40px 20px',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'flex-start',
-        borderTop: '3px solid rgba(68, 68, 68, 0.5)',
+        borderTop: '3px solid rgba(0, 0, 0, 0.1)',
         flexWrap: 'wrap',
       }}
     >
@@ -56,7 +64,7 @@ const Footer = () => {
           }}
           whileHover="hover"
         />
-        <div style={{ textAlign: 'center', color: '#ccc', fontSize: '0.9rem', marginTop: '15px' }}>
+        <div style={{ textAlign: 'center', color: '#333', fontSize: '0.9rem', marginTop: '15px' }}>
           <p style={{ margin: '0' }}>Aster Plaza, 3rd Floor, Meskel Flower, Bole</p>
           <p style={{ margin: '0' }}>+251 116 630 182</p>
           <p style={{ margin: '0' }}>Info@251communications.com</p>
@@ -66,20 +74,20 @@ const Footer = () => {
 
       {/* Quick Links */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h4 style={{ color: '#eee', marginBottom: '15px' }}>Quick Links</h4>
+        <h4 style={{ color: '#000', marginBottom: '15px' }}>Quick Links</h4>
         {links.map((link, index) => (
           <Link
             key={index}
             to={link.path}
             style={{
-              color: '#bbb',
+              color: '#555',
               textDecoration: 'none',
               fontSize: '0.9rem',
               padding: '6px 0',
               transition: 'color 0.3s',
             }}
-            onMouseEnter={(e) => (e.target.style.color = '#fff')}
-            onMouseLeave={(e) => (e.target.style.color = '#bbb')}
+            onMouseEnter={(e) => (e.target.style.color = '#000')}
+            onMouseLeave={(e) => (e.target.style.color = '#555')}
           >
             {link.text}
           </Link>
@@ -88,42 +96,39 @@ const Footer = () => {
 
       {/* Services */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h4 style={{ color: '#eee', marginBottom: '15px' }}>Our Services</h4>
+        <h4 style={{ color: '#000', marginBottom: '15px' }}>Our Services</h4>
         {serviceLinks.map((service, index) => (
           <HashLink
             key={index}
             smooth
             to={service.path}
             style={{
-              color: '#bbb',
+              color: '#555',
               textDecoration: 'none',
               fontSize: '0.9rem',
               padding: '6px 0',
               transition: 'color 0.3s',
             }}
-            onMouseEnter={(e) => (e.target.style.color = '#fff')}
-            onMouseLeave={(e) => (e.target.style.color = '#bbb')}
+            onMouseEnter={(e) => (e.target.style.color = '#000')}
+            onMouseLeave={(e) => (e.target.style.color = '#555')}
           >
             {service.text}
           </HashLink>
         ))}
       </div>
 
-      {/* Stay Connected / Newsletter */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h4 style={{ color: '#eee', marginBottom: '15px' }}>Stay Connected</h4>
-     
-
-<Link to='/contact' className="hidden md:flex  pr-4">
-<button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+      {/* Stay Connected / Contact Button */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',paddingTop:"90px",marginTop: '20px' }}>
+      
+        <Link to='/contact' className="hidden md:flex pr-4">
+          <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
         </Link>
-     
       </div>
 
       {/* Social Media Links */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-        <h4 style={{ color: '#eee', marginBottom: '15px' }}>Follow Us</h4>
-        <div style={{ display: 'flex', gap: '15px' }}>
+       
+        <div style={{ display: 'flex', gap: '15px' ,justifyContent: 'center',paddingTop:"100px"}}>
           {socialLinks.map((social, index) => (
             <a
               key={index}
@@ -131,13 +136,13 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: '#bbb',
+                color: '#555',
                 textDecoration: 'none',
                 fontSize: '1.5rem',
                 transition: 'color 0.3s',
               }}
-              onMouseEnter={(e) => (e.target.style.color = '#fff')}
-              onMouseLeave={(e) => (e.target.style.color = '#bbb')}
+              onMouseEnter={(e) => (e.target.style.color = '#000')}
+              onMouseLeave={(e) => (e.target.style.color = '#555')}
               aria-label={social.label}
             >
               {social.icon}
