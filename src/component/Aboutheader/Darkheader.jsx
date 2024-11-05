@@ -64,7 +64,7 @@ const Header = () => {
   
 
   return (
-    <section className="header-wrapper bg-gray-600" style={{ overflowX: 'hidden', padding: 0, margin: 0 }}>
+    <section className="header-wrapper bg-gray-900" style={{ overflowX: 'hidden', padding: 0, margin: 0 }}>
     <div className="header-container md:px-[20px] flex items-center justify-between">
       <motion.img
         variants={{
@@ -127,7 +127,7 @@ const Header = () => {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <Menu
+                {/* <Menu
                   id="service-menu"
                   anchorEl={serviceAnchorEl}
                   open={Boolean(serviceAnchorEl)}
@@ -141,7 +141,7 @@ const Header = () => {
                   <MenuItem onClick={() => handleScrollToSection('production')}>Production</MenuItem>
                   <MenuItem onClick={() => handleScrollToSection('research')}>Research</MenuItem>
                   <MenuItem onClick={() => handleScrollToSection('vas')}>VAS</MenuItem>
-                </Menu>
+                </Menu> */}
               </li>
             ) : (
               <NavLink

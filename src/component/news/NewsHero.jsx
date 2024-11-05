@@ -38,7 +38,7 @@ const NewsHero = () => {
   };
 
   return (
-    <section className="news-wrapper bg-[--white] p-10">
+    <section className="news-wrapper bg-[--white] p-10 "style={{ backgroundColor: '#fff6f9'}}>
       <div className="news-container border-solid border-[1px] flex flex-col md:flex-row justify-center items-start p-0 h-[500px]">
         
         {/* Main content area */}

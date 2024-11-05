@@ -44,9 +44,10 @@ const Header = () => {
   const [targetSectionId, setTargetSectionId] = useState(null);
 
   const handleScrollToSection = (id) => {
+    console.log("Target Page==>",id)
     setTargetSectionId(id); // Store the target section ID
-    navigate('/services');   // Navigate to the services page
-    handleServiceClose();    // Close dropdown after selection
+    //navigate('/services');   // Navigate to the services page
+   handleServiceClose();    // Close dropdown after selection
   };
   
   useEffect(() => {
@@ -54,7 +55,7 @@ const Header = () => {
       const element = document.getElementById(targetSectionId);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop - 100,
+          top: element.offsetTop ,
           behavior: 'smooth',
         });
       }

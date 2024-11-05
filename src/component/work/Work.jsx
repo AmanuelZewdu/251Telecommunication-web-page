@@ -97,7 +97,7 @@ const Work = () => {
   };
 
   return (
-    <section className="bg-gray-600">
+    <section className="bg-gray-900">
     <Mainheader />
     
     <div className="work-container px-2 md:px-20 flex flex-col items-center">

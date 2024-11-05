@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Footer from "../footer/Footer";
 const Carer = ( {data}) => {
   return (
-    <section className="bg-[--white]">
+    <section className="bg-[--white] " style={{ backgroundColor: '#fff6f9'}}>
       <Mainheader />
       <div className="carer-container p-20">
         <div className="carer-text ">
@@ -18,11 +18,12 @@ const Carer = ( {data}) => {
           </h2>
         </div>
         {data.length === 0 ? (
-  <div className="text-center mt-8">
-    <p className="text-[--black] md:text-[2.5rem] text-[2rem] font-[300]">
-      Thank you for your interest in joining our team. Currently, we are not hiring, but we encourage you to check back in the future for any potential opportunities.
-    </p>
-  </div>
+ <div className="text-center mt-8">
+ <p className="text-[--black1] text-black text-left rounded font-[400]"  style={{ fontFamily: 'Montserrat, sans-serif' }} > 
+   Thank you for your interest in joining our team. Currently, we are not hiring, but we encourage you to check back in the future for any potential opportunities.
+ </p>
+</div>
+
 ) : (
   data.map((data, i) => (
     <div className="apply-container flex-col" key={i}>
