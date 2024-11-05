@@ -45,15 +45,20 @@ const Header = () => {
 
   const handleScrollToSection = (id) => {
     console.log("Target Page==>",id)
+    navigate('/services');  
     setTargetSectionId(id); // Store the target section ID
-    //navigate('/services');   // Navigate to the services page
+ // Navigate to the services page
    handleServiceClose();    // Close dropdown after selection
   };
   
+
+
   useEffect(() => {
     if (location.pathname === '/services' && targetSectionId) {
       const element = document.getElementById(targetSectionId);
+      
       if (element) {
+        navigate('/services'); 
         window.scrollTo({
           top: element.offsetTop ,
           behavior: 'smooth',

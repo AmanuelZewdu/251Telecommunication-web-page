@@ -14,17 +14,17 @@ const links = [
   { path: '/services', text: 'Services' },
   { path: '/work', text: 'Our Work' },
   { path: '/news', text: 'News' },
-  { path: '/career', text: 'Career' },
+  { path: '/carer', text: 'Career' },
 ];
 
 const serviceLinks = [
-  { path: '#experential', text: 'Experiential' },
-  { path: '#creative', text: 'Creative' },
-  { path: '#digital', text: 'Digital' },
-  { path: '#pr', text: 'PR' },
-  { path: '#production', text: 'Production' },
-  { path: '#research', text: 'Research' },
-  { path: '#vas', text: 'VAS' },
+  { path: '/services#experential', text: 'Experiential' },
+  { path: '/services#creative', text: 'Creative' },
+  { path: '/services#digital', text: 'Digital' },
+  { path: '/services#pr', text: 'PR' },
+  { path: '/services#production', text: 'Production' },
+  { path: '/services#research', text: 'Research' },
+  { path: '/services#vas', text: 'VAS' },
 ];
 
 const socialLinks = [
@@ -76,21 +76,23 @@ const Footer = () => {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h4 style={{ color: '#000', marginBottom: '15px' }}>Quick Links</h4>
         {links.map((link, index) => (
-          <Link
-            key={index}
-            to={link.path}
-            style={{
-              color: '#555',
-              textDecoration: 'none',
-              fontSize: '0.9rem',
-              padding: '6px 0',
-              transition: 'color 0.3s',
-            }}
-            onMouseEnter={(e) => (e.target.style.color = '#000')}
-            onMouseLeave={(e) => (e.target.style.color = '#555')}
-          >
-            {link.text}
-          </Link>
+     <Link
+     key={index}
+     to={link.path}
+     onClick={() => window.scrollTo(0, 0)}
+     style={{
+       color: '#555',
+       textDecoration: 'none',
+       fontSize: '0.9rem',
+       padding: '6px 0',
+       transition: 'color 0.3s',
+     }}
+     onMouseEnter={(e) => (e.target.style.color = '#000')}
+     onMouseLeave={(e) => (e.target.style.color = '#555')}
+   >
+     {link.text}
+   </Link>
+   
         ))}
       </div>
 
