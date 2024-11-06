@@ -20,7 +20,7 @@ const Carer = ( {data}) => {
         {data.length === 0 ? (
  <div className="text-center mt-8">
  <p className="text-[--black1] text-black text-left rounded font-[400]"  style={{ fontFamily: 'Montserrat, sans-serif' }} > 
-   Thank you for your interest in joining our team. Currently, we are not hiring, but we encourage you to check back in the future for any potential opportunities.
+   Thank you for your interest in joining our team. <br /> Currently, we are not hiring, but we encourage you to check back in the future for any potential opportunities.
  </p>
 </div>
 
@@ -35,7 +35,7 @@ const Carer = ( {data}) => {
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.department}</h3>
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.locationType}</h3>
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.positionType}</h3>
-          <Link to={`/career/apply/${data._id}`}>
+          <Link to={`/carer/apply/${data._id}`}>
             <button className="border-solid border-[--yellow] border-[1px] p-4">APPLY</button>
           </Link>
         </div>
