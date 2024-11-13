@@ -1,14 +1,15 @@
 import React from "react";
-import '../../styles/Home.css';
+//import '../../styles/Home.css';
+
+import image from '../../../asset/Home_page_About.png'
 
 const Expermental = () => {
   return (
-    <section className="home-top-section relative">
-      <div className="digital-content absolute top-0 left-0 w-full h-full flex flex-col md:flex-row gap-4 sm:gap-8 md:gap-12 lg:gap-16 justify-center items-center text-white">
-        {/* Your responsive content goes here */}
-    
-      </div>
-    </section>
+<section>
+      <div className='bg-[--white] overflow-x-hidden'>
+    <img src={image} alt="" />
+  </div>
+</section>
   );
 };
 
