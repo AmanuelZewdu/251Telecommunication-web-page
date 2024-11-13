@@ -27,10 +27,10 @@ const boxData = [
 
 const NewsHero = () => {
   const [mainContent, setMainContent] = useState(boxData[0]);
-  const [activeIndex, setActiveIndex] = useState(null); // Track the index of the scaled image
+  const [activeIndex, setActiveIndex] = useState(null); 
 
   const handleImageClick = (index, box) => {
-    // Toggle the scaling effect
+
     setActiveIndex(activeIndex === index ? null : index);
     setMainContent(box);
   };
