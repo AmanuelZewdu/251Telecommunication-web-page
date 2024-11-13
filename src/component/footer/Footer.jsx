@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 import Logo from '../../asset/logo_main.png';
-import twitter_logo from "../../asset/twitter_logo.png"
+import twitter_logo from "../../asset/twitter_logo.png";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from 'react-icons/fa';
-import { RxCross2 } from 'react-icons/rx';
-
-
+import './footer.css';
 
 const links = [
   { path: '/', text: 'Home' },
@@ -41,116 +39,67 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: '#fff',
-        color: '#000',
-        padding: '40px 20px',
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'flex-start',
-        borderTop: '3px solid rgba(0, 0, 0, 0.1)',
-        flexWrap: 'wrap',
-      }}
-    >
+    <footer className="footer-container">
       {/* Logo Section */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="footer-section">
         <motion.img
           src={Logo}
           alt="logo"
-          style={{ maxHeight: '80px', cursor: 'pointer', marginBottom: '15px' }}
+          className="logo"
           variants={{
             hover: { rotate: 360, transition: { duration: 1.2, ease: 'easeInOut' } },
           }}
           whileHover="hover"
         />
-        <div style={{ textAlign: 'center', color: '#333', fontSize: '0.9rem', marginTop: '15px' }}>
-          <p style={{ margin: '0' }}>Aster Plaza, 3rd Floor, Meskel Flower, Bole</p>
-          <p style={{ margin: '0' }}>+251 116 630 182</p>
-          <p style={{ margin: '0' }}>Info@251communications.com</p>
-          <p style={{ margin: '0' }}>Addis Ababa, Ethiopia</p>
+        <div className="contact-info">
+          <p>Aster Plaza, 3rd Floor, Meskel Flower, Bole</p>
+          <p>+251 116 630 182</p>
+          <p>Info@251communications.com</p>
+          <p>Addis Ababa, Ethiopia</p>
         </div>
       </div>
 
       {/* Quick Links */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h4 style={{ color: '#000', marginBottom: '15px' }}>Quick Links</h4>
+      <div className="footer-section">
+        <h4>Quick Links</h4>
         {links.map((link, index) => (
-     <Link
-     key={index}
-     to={link.path}
-     onClick={() => window.scrollTo(0, 0)}
-     style={{
-       color: '#555',
-       textDecoration: 'none',
-       fontSize: '0.9rem',
-       padding: '6px 0',
-       transition: 'color 0.3s',
-     }}
-     onMouseEnter={(e) => (e.target.style.color = '#000')}
-     onMouseLeave={(e) => (e.target.style.color = '#555')}
-   >
-     {link.text}
-   </Link>
-   
+          <Link key={index} to={link.path} onClick={() => window.scrollTo(0, 0)} className="footer-link">
+            {link.text}
+          </Link>
         ))}
       </div>
 
       {/* Services */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h4 style={{ color: '#000', marginBottom: '15px' }}>Our Services</h4>
+      <div className="footer-section">
+        <h4>Our Services</h4>
         {serviceLinks.map((service, index) => (
-          <HashLink
-            key={index}
-            smooth
-            to={service.path}
-            style={{
-              color: '#555',
-              textDecoration: 'none',
-              fontSize: '0.9rem',
-              padding: '6px 0',
-              transition: 'color 0.3s',
-            }}
-            onMouseEnter={(e) => (e.target.style.color = '#000')}
-            onMouseLeave={(e) => (e.target.style.color = '#555')}
-          >
+          <HashLink key={index} smooth to={service.path} className="footer-link">
             {service.text}
           </HashLink>
         ))}
       </div>
 
-      {/* Stay Connected / Contact Button */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',paddingTop:"90px",marginTop: '20px' }}>
-      
-        <Link to='/contact' className="hidden md:flex pr-4">
-          <button className="w-[7.5rem] h-[2.5rem] bg-[--yellow] text-[--black] rounded-[1.4rem]">Contact Us</button>
+      {/* Stay Connected */}
+      <div className="footer-section contact-section">
+        <Link to="/contact">
+          <button className="contact-button">Contact Us</button>
         </Link>
       </div>
 
       {/* Social Media Links */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-       
-        <div style={{ display: 'flex', gap: '15px' ,justifyContent: 'center',paddingTop:"100px"}}>
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#555',
-                textDecoration: 'none',
-                fontSize: '1.5rem',
-                transition: 'color 0.3s',
-              }}
-              onMouseEnter={(e) => (e.target.style.color = '#000')}
-              onMouseLeave={(e) => (e.target.style.color = '#555')}
-              aria-label={social.label}
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+      <div className="footer-section social-links">
+        {socialLinks.map((social, index) => (
+          <a
+            key={index}
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon"
+            aria-label={social.label}
+          >
+            {social.icon}
+          </a>
+        ))}
       </div>
     </footer>
   );

@@ -1,8 +1,31 @@
-.pr-top{
-    background-image: url('../../asset/Pr.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100svh;
-    /* background-size: 90%;  */
-    /* background-size: cover; */
+/* Ensure body and html take full height and eliminate any default margins/paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make sure the pr-wrapper takes full screen height */
+.pr-wrapper {
+    width: 100%;
+    height: 100vh;  /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Hide any overflow */
+}
+
+/* Make the image cover the whole container without blank spaces */
+.responsive-img {
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    width: 100%;
+    height: 100%;
+}
+
+/* Media query for smaller screens to avoid blank space */
+@media (max-width: 768px) {
+    .responsive-img {
+        object-position: center;  /* Center the image on small screens */
     }
+}

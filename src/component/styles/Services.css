@@ -1,0 +1,52 @@
+/* General Styling */
+.service-section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Large Screens */
+@media (min-width: 768px) {
+    .service-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Medium Screens (tablets) */
+@media (max-width: 1024px) {
+    .service-section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small Screens (mobile) */
+@media (max-width: 768px) {
+    .service-section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust text size, images, etc. for small screens */
+    .service-section h2, .service-section p {
+        font-size: 16px;  /* Adjust based on content */
+    }
+
+    /* Optionally, you can stack elements vertically for smaller devices */
+    .service-section > * {
+        width: 100%; /* Make content take full width */
+    }
+
+    /* Ensure the footer is not cramped on small screens */
+    footer {
+        padding: 10px 0;
+    }
+}
+
+/* Ensure images inside sections are responsive */
+.service-section img {
+    max-width: 100%;
+    height: auto;
+}

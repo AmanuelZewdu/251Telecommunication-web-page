@@ -1,17 +1,12 @@
 import React from 'react'
-import Header from '../../header/Header'
-import '../../styles/Vas.css'
-import Aboutheader from '../../Aboutheader/Aboutheader'
+import image from '../../../asset/vas.png'
 const Vas = () => {
   return (
-    <section className='vas-container p-0 m-0'>
-        {/* <Header />  */}
-        
-        <p>
-          
-        </p>
-    
-    </section>
+    <section>
+    <div className='bg-[--white] overflow-x-hidden'>
+  <img src={image} alt="" />
+</div>
+</section>
     
   )
 }

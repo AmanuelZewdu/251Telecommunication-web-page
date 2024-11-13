@@ -8,7 +8,7 @@ import Research from "../aboutpages/research/Research";
 import Experential from "../aboutpages/experential/Experential"
 import Vas from "../aboutpages/Vas/Vas"
 import Footer from "../footer/Footer";
-
+    
 
 
 // const Services = ()=>{

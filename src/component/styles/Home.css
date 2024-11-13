@@ -1,8 +1,37 @@
-.home-top{
-    background-image: url('../../asset/Home_page_About.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    height:120svh;
-    /* background-size: 90%;  */
-    background-size: cover;
-    }
+.home-top-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust to the viewport height */
+  overflow: hidden;
+  background-image: url('../../asset/Home_page_About.png'); /* Use your actual path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat;
+}
+
+/* Media query for tablets */
+@media (max-width: 1024px) {
+  .home-top-section {
+    background-size: contain; /* Adjusts size for better fit */
+    background-position: top center; /* Adjusts position */
+    height: 90vh; /* Reduces height to fit better */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .home-top-section {
+    background-size: contain; /* Ensures the image stays visible */
+    background-position: center top; /* Moves the image to fit content */
+    height: 80vh; /* Further reduces height */
+  }
+}
+
+/* Media query for very small devices */
+@media (max-width: 480px) {
+  .home-top-section {
+    background-size: contain; /* Keeps the image visible */
+    background-position: top center; /* Centers the most important part */
+    height: 70vh; /* Reduces height further */
+  }
+}

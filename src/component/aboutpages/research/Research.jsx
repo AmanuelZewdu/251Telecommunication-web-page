@@ -1,17 +1,14 @@
 import React from 'react'
-import Mainheader from '../../Aboutheader/Mainheader'
-import { NavLink, useLocation } from 'react-router-dom'
-import '../../styles/Research.css'
-const Research = () => {
-    const location = useLocation();
-    return (
-    <section className="research-wrapper bg-[--white]  bg-cover text-[--black] p-0" >
-     {/* <Mainheader /> */}
-     <div className="reasearch-container p-4 m-0 md:p-0">
- 
-        </div>
+import image from '../../../asset/Research.png'
 
-    </section>
+const Research = () => {
+
+    return (
+<section>
+      <div className='bg-[--white] overflow-x-hidden'>
+    <img src={image} alt="" />
+  </div>
+</section>
   )
 }
 
