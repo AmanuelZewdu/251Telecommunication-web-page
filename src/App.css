@@ -102,6 +102,23 @@ body{
   }
 }
 
+.coming-soon {
+  text-align: center;
+  margin-top: 20%;
+  font-family: Arial, sans-serif;
+}
+
+.coming-soon h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.coming-soon p {
+  font-size: 1rem;
+  color: #666;
+}
+
+
 @keyframes rotate-item {
   0% {
     transform: rotate(0deg);

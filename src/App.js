@@ -21,52 +21,75 @@ import Services from './component/ourService/Service';
 import Pr from './component/aboutpages/Pr/Pr';
 import ClientPage from './pages/Client/ClientPage';
 import Work from './component/work/Work';
-import Event from "./component/event/Event"
+import Event from "./component/event/Event";
 
 function App() {
-  const [data, setData] = useState([])
-   async  function  getData() {
-   
+  const [data, setData] = useState([]);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Function to check the screen size
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth < 768); // Change 768 to your preferred breakpoint
+  };
+
+  // Check screen size on component mount and when the window is resized
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
+  // Function to fetch data
+  async function getData() {
     try {
       const response = await axios.get('/jobs');
-      setData(response.data); // Log the data to the console
+      setData(response.data);
     } catch (error) {
-      console.error('Error fetching data:', error); // Handle errors gracefully
+      console.error('Error fetching data:', error);
     }
   }
 
   useEffect(() => {
-    getData()
-  }, [])
-  
-   console.log(data.title)
+    getData();
+  }, []);
+
+  if (isSmallScreen) {
+    return (
+      <div className="coming-soon">
+        <h1>Coming Soon</h1>
+        <p>This site is under construction for small-screen devices. Please visit us on a larger screen.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
-       <Router>
-       <Routes>
-           <Route path='/' element={<Home/>} />
-           <Route path='/about' element={<About/>} />
-           <Route path='/news' element={<News />} />
-           <Route path='/about/expermental' element={<Expermental />}  />
-           <Route path='/about/creative' element={<Creative/>}  />
-           <Route path='/about/digital' element={<Digital />}  />
-           <Route path='/about/pr' element={<Pr />} />
-           <Route path='/about/production' element={<Production/>} />
-           <Route path='/about/research'   element={<Research/>} />
-           <Route path='/about/communication'  />
-           <Route path='/clients' element={<ClientPage />} />
-           <Route path='/contact' element={<Contact />} />
-           <Route path='/work' element={<Work />} />
-           <Route path='/carer/' element={<Carer data={data} />} />
-           <Route path='/carer/apply/:id' element={<Apply data={data} />} />
-           <Route path='/about/creative/viewdetail' element={<ViewDetail/>} />
-           <Route path='/services' element={<Services/>} />
-           <Route path='/event' element={<Event/>} />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/about/expermental' element={<Expermental />} />
+          <Route path='/about/creative' element={<Creative />} />
+          <Route path='/about/digital' element={<Digital />} />
+          <Route path='/about/pr' element={<Pr />} />
+          <Route path='/about/production' element={<Production />} />
+          <Route path='/about/research' element={<Research />} />
+          <Route path='/about/communication' />
+          <Route path='/clients' element={<ClientPage />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/carer/' element={<Carer data={data} />} />
+          <Route path='/carer/apply/:id' element={<Apply data={data} />} />
+          <Route path='/about/creative/viewdetail' element={<ViewDetail />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/event' element={<Event />} />
         </Routes>
-       </Router>
-     
-     
-    </div> 
+      </Router>
+    </div>
   );
 }
 

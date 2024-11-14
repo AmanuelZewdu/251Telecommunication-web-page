@@ -1,12 +1,13 @@
 //import "../styles/News.css"
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DodaiNews from '../../asset/dodai.jpeg';
 
 const boxData = [
   {
     imageSrc: DodaiNews,
     title: 'Dodai and EIH',
-    description: 'In an event held on October 21 2024 at the Hyatt Regency, Dodai and Ethiopian Investment Holdings (EIH) announced a transformative partnership aimed at accelerating the growth of sustainable transportation in the country. ',
+    description: 'In an event held on October 21 2024 at the Hyatt Regency, Dodai and Ethiopian Investment Holdings (EIH) announced a transformative partnership aimed at accelerating the growth of sustainable transportation in the country.',
   },
   {
     imageSrc: "",
@@ -27,12 +28,17 @@ const boxData = [
 
 const NewsHero = () => {
   const [mainContent, setMainContent] = useState(boxData[0]);
-  const [activeIndex, setActiveIndex] = useState(null); 
+  const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleImageClick = (index, box) => {
-
     setActiveIndex(activeIndex === index ? null : index);
     setMainContent(box);
+  };
+
+  const handleViewAllClick = () => {
+    // Navigate to the full news detail page
+    navigate('/news-detail', { state: { newsContent: mainContent } });
   };
 
   return (
@@ -54,6 +60,14 @@ const NewsHero = () => {
             <p className='text-[0.8rem] md:text-[1rem] text-white bg-[rgba(0,0,0,0.4)] p-2 rounded'>
               {mainContent.description}
             </p>
+            <div className='flex justify-end'>
+  <button
+    onClick={handleViewAllClick}
+    className='text-white rounded'>
+    Read All
+  </button>
+</div>
+
           </div>
         </div>
 
@@ -67,7 +81,7 @@ const NewsHero = () => {
               style={{ 
                 zIndex: boxData.length - index,
                 transform: activeIndex === index ? 'scale(1.2)' : 'scale(1)', 
-                margin: '0 -10px', // Apply negative margin to overlap items
+                margin: '0 -10px',
               }}
             >
               <img 
@@ -75,15 +89,13 @@ const NewsHero = () => {
                 alt={box.title} 
                 className={`absolute inset-0 w-full h-full object-cover rounded-[1rem] ${activeIndex !== index ? 'blur-sm' : ''}`}
               />
-              <div className={`absolute inset-0 bg-yellow-400 opacity-30 rounded-[1rem] ${activeIndex !== index ? 'blur-sm' : ''}`} /> {/* Slightly transparent yellow overlay */}
-  
+              <div className={`absolute inset-0 bg-yellow-400 opacity-30 rounded-[1rem] ${activeIndex !== index ? 'blur-sm' : ''}`} />
               <p className='absolute top-0 left-0 m-4 text-white font-semibold bg-black bg-opacity-50 p-2 rounded'>
                 0{index + 1}
               </p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
