@@ -59,6 +59,11 @@ function App() {
       <div className="coming-soon">
         <h1>Coming Soon</h1>
         <p>This site is under construction for small-screen devices. Please visit us on a larger screen.</p>
+        <p>Feel free to reach out to us.</p>
+        <p>Aster Plaza, 3rd Floor, Meskel Flower, Bole</p>
+          <p>+251 116 630 182</p>
+          <p>Info@251communications.com</p>
+          <p>Addis Ababa, Ethiopia</p>
       </div>
     );
   }
