@@ -27,12 +27,11 @@ function App() {
   const [data, setData] = useState([]);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // Function to check the screen size
+
   const checkScreenSize = () => {
-    setIsSmallScreen(window.innerWidth < 768); // Change 768 to your preferred breakpoint
+    setIsSmallScreen(window.innerWidth < 768); 
   };
 
-  // Check screen size on component mount and when the window is resized
   useEffect(() => {
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
@@ -42,7 +41,6 @@ function App() {
     };
   }, []);
 
-  // Function to fetch data
   async function getData() {
     try {
       const response = await axios.get('/jobs');
