@@ -12,7 +12,7 @@ const links = [
   { path: '/services', text: 'Services' },
   { path: '/work', text: 'Our Work' },
   { path: '/news', text: 'News' },
-  { path: '/carer', text: 'Career' },
+  { path: '/career', text: 'Career' },
 ];
 
 const serviceLinks = [

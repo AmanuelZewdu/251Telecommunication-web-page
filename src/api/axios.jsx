@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export  default axios.create({
-   baseURL: 'https://two51-comm-backend.onrender.com' 
+   baseURL: 'https://two51-communications-backend.onrender.com'  
 })

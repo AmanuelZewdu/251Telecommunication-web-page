@@ -58,7 +58,7 @@ function App() {
     return (
       <div className="coming-soon">
         <h1>Coming Soon</h1>
-        <p>This site is under construction for small-screen devices. Please visit us on a larger screen.</p>
+        <p>This site is under construction for mobile devices. Please visit us on a laptop or desktop.</p>
         <p>Feel free to reach out to us.</p>
         <p>Aster Plaza, 3rd Floor, Meskel Flower, Bole</p>
           <p>+251 116 630 182</p>
@@ -85,11 +85,12 @@ function App() {
           <Route path='/clients' element={<ClientPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/work' element={<Work />} />
-          <Route path='/carer/' element={<Carer data={data} />} />
+          <Route path='/career/' element={<Carer data={data} />} />
           <Route path='/carer/apply/:id' element={<Apply data={data} />} />
           <Route path='/about/creative/viewdetail' element={<ViewDetail />} />
           <Route path='/services' element={<Services />} />
           <Route path='/event' element={<Event />} />
+          <Route path='*' element={<Home />} />
         </Routes>
       </Router>
     </div>

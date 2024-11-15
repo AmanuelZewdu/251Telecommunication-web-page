@@ -8,8 +8,6 @@
   }
   
   .footer-section {
-    flex: 1 1 45%;
-    margin-bottom: 20px;
     text-align: center;
   }
   
@@ -17,7 +15,15 @@
     max-height: 80px;
     cursor: pointer;
     margin-bottom: 15px;
-  }
+    display: block; /* Ensures the logo behaves like a block-level element */
+    margin-left: auto; /* Centers the logo horizontally */
+    margin-right: auto; /* Centers the logo horizontally */
+}
+.contact-section{  
+    margin-top: auto; /* Centers the logo horizontally */
+    margin-bottom: auto; 
+}
+
   
   .contact-info {
     color: #333;
@@ -50,6 +56,8 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: auto; /* Centers the logo horizontally */
+    margin-bottom: auto; 
   }
   
   .social-icon {
@@ -63,7 +71,7 @@
   }
   
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .footer-section {
       flex: 1 1 100%;
       margin-bottom: 15px;
@@ -73,5 +81,5 @@
       width: 100%;
       margin-top: 10px;
     }
-  }
+  } */
   

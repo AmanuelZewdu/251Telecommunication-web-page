@@ -35,7 +35,7 @@ const Carer = ( {data}) => {
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.department}</h3>
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.locationType}</h3>
           <h3 className="text-[1.2rem] text-[--black1] w-[100%]">{data.positionType}</h3>
-          <Link to={`/carer/apply/${data._id}`}>
+          <Link to={`/career/apply/${data._id}`}>
             <button className="border-solid border-[--yellow] border-[1px] p-4">APPLY</button>
           </Link>
         </div>

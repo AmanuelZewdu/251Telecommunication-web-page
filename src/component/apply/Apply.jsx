@@ -68,7 +68,7 @@ const handleFileChange = (event) => {
           })
           console.log(response.data)
           alert("applied sucessfully")
-           navigate('/carer')
+           navigate('/career')
          } catch (error) {
         console.log(error,'error' )
          }
